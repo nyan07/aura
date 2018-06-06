@@ -1,0 +1,41 @@
+%
+% Documento: FOLHA DE ROSTO
+%
+
+\makeatletter
+\begin{folhaderosto}
+	\thispagestyle{empty}%limpa estilo da pagina
+	
+    \begin{center}
+    
+		\small\textbf{\expandafter\uppercase\expandafter{\imprimirnomeautor}}\\
+		\vspace*{8.2 cm}%Espaço entre linhas
+		\normalsize\textbf{\expandafter\uppercase\expandafter{\imprimirtitulotb}}\\
+		
+    \end{center}
+	
+	\vspace*{0.35 cm}%Espaçamento entre linhas
+		    \large%tamanho da fonte 
+    		\hfill%Estica horizontamente  com espaços
+	    	\begin{minipage}{8 cm}%Minipagina
+	    		\begin{small} %Muda tamanho da fonte
+	    		\setlength{\baselineskip}{0.7\baselineskip}
+				
+				{Trabalho de conclusão apresentado à banca do Curso de Artes Visuais – {\imprimirprograma } do {\imprimirdepartamento} da {\imprimirinstituicao}, como requisito obrigatório para obtenção do título de {\imprimirgrau} em Artes Visuais.}\\{
+		    	}\\Orientador: {\imprimirtitulacaoorientador }{ }{\imprimirorientador}\\{
+		    	}
+				
+				
+				\end{small} %Muda tamanho da fonte
+		    \end{minipage}%%Minipagina
+		    	
+		    \vspace*{10 cm}%Espaçamento entre linhas
+		    
+		    \begin{center} %Alinhamento centralizado
+		    	\normalsize %Muda tamanho da fonte
+	    		\imprimirlocal\\
+	    		\imprimirdata
+	    	\end{center}%Alinhamento centralizado
+
+\end{folhaderosto}
+\makeatother
