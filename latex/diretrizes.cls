@@ -7,16 +7,18 @@
 }
 
 \PassOptionsToClass{%
-    % Opções da classe memoir
-    12pt,                       % Tamanho da fonte
-    %openright,                 % Capítulos começam em página ímpar (insere página vazia caso preciso)
-    a4paper,                    % Tamanho do papel
-    sumario=abnt-6027-2012,     % Seleciona o sumário abnt-6027-2012
-    % Opções da classe abntex2
-    %chapter=TITLE,              % Títulos de capítulos convertidos em letras maiúsculas
-    section=TITLE,              % Títulos de seções convertidos em letras maiúsculas
-    % Opções do pacote babel
-    brazil,                     % Idioma do documento
+	% -- opções da classe memoir --
+	12pt,				% tamanho da fonte
+	openright,			% capítulos começam em pág ímpar (insere página vazia caso preciso)
+	twoside,			% para impressão em recto e verso. Oposto a oneside
+	a4paper,			% tamanho do papel. 
+	% -- opções da classe abntex2 --
+	%chapter=TITLE,		% títulos de capítulos convertidos em letras maiúsculas
+	section=TITLE,		% títulos de seções convertidos em letras maiúsculas
+	%subsection=TITLE,	% títulos de subseções convertidos em letras maiúsculas
+	%subsubsection=TITLE,% títulos de subsubseções convertidos em letras maiúsculas
+	% -- opções do pacote babel --
+	brazil,				% o último idioma é o principal do documento
     }{abntex2}
 
 \ProcessOptions\relax

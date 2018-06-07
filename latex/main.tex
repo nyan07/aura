@@ -2,19 +2,19 @@
 %\documentclass[doubleside]{diretrizes}        % Imprimir frente e verso
 
 % Importações de pacotes
-\usepackage[alf, abnt-emphasize=bf, recuo=0cm, abnt-etal-cite=2, abnt-etal-list=0]{abntex2cite}  % Citações padrão ABNT
-\usepackage[utf8]{inputenc} 						 			% Acentuação direta
-\usepackage[T1]{fontenc}                            				% Codificação da fonte em 8 bits
-\usepackage{graphicx}                               					% Inserir figuras
-\usepackage{amsfonts, amssymb, amsmath}         		% Fonte e símbolos matemáticos
-\usepackage{booktabs}                               					% Comandos para tabelas
-\usepackage{verbatim}                               					% Texto é interpretado como escrito no documento
-\usepackage{multirow, array}                        				% Múltiplas linhas e colunas em tabelas
-\usepackage{indentfirst}                            					% Endenta o primeiro parágrafo de cada seção.
-\usepackage{microtype}                              					% Para melhorias de justificação?
-\usepackage[algoruled, portuguese]{algorithm2e}		% Escrever algoritmos
-\usepackage{float}                                  						% Utilizado para criação de floats
-\usepackage{times}                                  					% Usa a fonte Times
+\usepackage[alf, abnt-emphasize=bf, recuo=0cm, abnt-etal-cite=2, abnt-etal-list=0,,abnt-full-initials=yes]{abntex2cite} % Citações padrão ABNT
+\usepackage[utf8]{inputenc} % Acentuação direta
+\usepackage[T1]{fontenc} % Codificação da fonte em 8 bits
+\usepackage{graphicx} % Inserir figuras
+\usepackage{amsfonts, amssymb, amsmath} % Fonte e símbolos matemáticos
+\usepackage{booktabs} % Comandos para tabelas
+\usepackage{verbatim} % Texto é interpretado como escrito no documento
+\usepackage{multirow, array} % Múltiplas linhas e colunas em tabelas
+\usepackage{indentfirst} % Endenta o primeiro parágrafo de cada seção.
+\usepackage{microtype} % Para melhorias de justificação?
+\usepackage[algoruled, portuguese]{algorithm2e} % Escrever algoritmos
+\usepackage{float} % Utilizado para criação de floats
+\usepackage{times} % Usa a fonte Times
 
 
 % Inclui o preâmbulo do documento
@@ -70,12 +70,12 @@
 
     % Elementos textuais
     \textual
-    \include{./02-elementos-textuais/introducao}            % Introdução
-    \include{./02-elementos-textuais/arte-computacional}           % Disposições
-    \include{./02-elementos-textuais/interacao-e-participacao}  			% Estrutura    
-    \include{./02-elementos-textuais/luz-material}           	% Ilustrações
-    \include{./02-elementos-textuais/composicao}            	% Citações
-    \include{./02-elementos-textuais/consideracoes-finais}            % Tecnica de referencias 
+    \include{./02-elementos-textuais/introducao} 
+    \include{./02-elementos-textuais/arte-computacional} 
+    \include{./02-elementos-textuais/interacao-e-participacao} 
+    \include{./02-elementos-textuais/luz-material} 
+    \include{./02-elementos-textuais/composicao}
+    \include{./02-elementos-textuais/consideracoes-finais}
 
     % Elementos pós textuais
     \postextual
