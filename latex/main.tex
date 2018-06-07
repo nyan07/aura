@@ -3,18 +3,19 @@
 
 % Importações de pacotes
 \usepackage[alf, abnt-emphasize=bf, recuo=0cm, abnt-etal-cite=2, abnt-etal-list=0]{abntex2cite}  % Citações padrão ABNT
-\usepackage[utf8]{inputenc}                         % Acentuação direta
-\usepackage[T1]{fontenc}                            % Codificação da fonte em 8 bits
-\usepackage{graphicx}                               % Inserir figuras
-\usepackage{amsfonts, amssymb, amsmath}             % Fonte e símbolos matemáticos
-\usepackage{booktabs}                               % Comandos para tabelas
-\usepackage{verbatim}                               % Texto é interpretado como escrito no documento
-\usepackage{multirow, array}                        % Múltiplas linhas e colunas em tabelas
-\usepackage{indentfirst}                            % Endenta o primeiro parágrafo de cada seção.
-\usepackage{microtype}                              % Para melhorias de justificação?
-\usepackage[algoruled, portuguese]{algorithm2e}     % Escrever algoritmos
-\usepackage{float}                                  % Utilizado para criação de floats
-\usepackage{times}                                  % Usa a fonte Times
+\usepackage[utf8]{inputenc} 						 			% Acentuação direta
+\usepackage[T1]{fontenc}                            				% Codificação da fonte em 8 bits
+\usepackage{graphicx}                               					% Inserir figuras
+\usepackage{amsfonts, amssymb, amsmath}         		% Fonte e símbolos matemáticos
+\usepackage{booktabs}                               					% Comandos para tabelas
+\usepackage{verbatim}                               					% Texto é interpretado como escrito no documento
+\usepackage{multirow, array}                        				% Múltiplas linhas e colunas em tabelas
+\usepackage{indentfirst}                            					% Endenta o primeiro parágrafo de cada seção.
+\usepackage{microtype}                              					% Para melhorias de justificação?
+\usepackage[algoruled, portuguese]{algorithm2e}		% Escrever algoritmos
+\usepackage{float}                                  						% Utilizado para criação de floats
+\usepackage{times}                                  					% Usa a fonte Times
+
 
 % Inclui o preâmbulo do documento
 \include{01-elementos-pre-textuais/preambulo}
@@ -32,7 +33,7 @@
     pdftitle={\@title},
     pdfauthor={\@author},
     pdfsubject={\imprimirpreambulo},
-    pdfkeywords={abnt, latex, abntex, abntex2}
+    pdfkeywords={art, kinect, arduino, art and technology}
 }
 \makeatother
 
@@ -60,7 +61,7 @@
     \include{./01-elementos-pre-textuais/epigrafe}          % Epígrafe
     %\include{./01-elementos-pre-textuais/resumoPt}          % Resumo na língua vernácula
     %\include{./01-elementos-pre-textuais/resumoEn}          % Resumo em língua estrangeira
-    %\include{./01-elementos-pre-textuais/listaFiguras}      % Lista de figuras
+    \include{./01-elementos-pre-textuais/listaFiguras}      % Lista de figuras
     %\include{./01-elementos-pre-textuais/listaTabelas}      % Lista de tabelas
     %\include{./01-elementos-pre-textuais/listaQuadros}      % Lista de quadros
     %\include{./01-elementos-pre-textuais/listaSiglas}       % Lista de abreviaturas e siglas

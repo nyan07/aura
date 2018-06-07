@@ -129,6 +129,10 @@
 \providecommand{\imprimirprograma}{}
 \newcommand{\programa}[1]{\renewcommand{\imprimirprograma}{#1}}
 
+% Comandos de dados - curso
+\providecommand{\imprimircurso}{}
+\newcommand{\curso}[1]{\renewcommand{\imprimircurso}{#1}}
+
 % Comandos de dados - subtítulo
 \providecommand{\imprimirsubtitulo}{}
 \newcommand{\subtitulo}[1]{\renewcommand{\imprimirsubtitulo}{#1}}
