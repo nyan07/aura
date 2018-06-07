@@ -8,7 +8,7 @@ A presença do espectador, estimulada através do sensor Kinect, provoca o efei
 
 O interesse sobre o tema vem da relação precoce que possuo com sistemas de computação. Surge como uma tentativa de fundir dois universos dos quais me sinto parte: a arte e a tecnologia. Além disso, a proposta traz como base de estudo o papel da luz na arte e como esses trabalhos são influenciados pelo meio no qual são expostos.
 
-A pesquisa engloba imersão na temática, busca de fontes em leituras de textos teóricos, visualização de vídeos e estudos relacionados a eletrônica e a computação. Foram experimentados vários componentes para se obter o resultado proposto. Depois de algumas investidas, chegou-se a composição de LEDs e fibra ótica como elemento luminescente e a utilização do sensor Kinect como entrada de dados devido à maior precisão em comparação com outros componentes testados, como o sensor ultrassônico, por exemplo.
+A pesquisa engloba imersão na temática, busca de fontes em leituras de textos teóricos, visualização de vídeos e estudos relacionados a eletrônica e a computação. Foram experimentados vários componentes para se obter o resultado proposto. Depois de algumas investidas, chegou-se a composição de LEDs e fibra ótica como elemento luminescente e a utilização do sensor Kinect como entrada de dados devido à maior precisão em comparação com outros componentes testados, como o sensor de distância ultrassônico, por exemplo.
 
 # Arte computacional
 
