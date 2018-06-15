@@ -10,12 +10,12 @@
 \usepackage{booktabs} % Comandos para tabelas
 \usepackage{verbatim} % Texto é interpretado como escrito no documento
 \usepackage{multirow, array} % Múltiplas linhas e colunas em tabelas
-\usepackage{indentfirst} % Endenta o primeiro parágrafo de cada seção.
+% \usepackage{indentfirst} % Endenta o primeiro parágrafo de cada seção.
 \usepackage{microtype} % Para melhorias de justificação?
 \usepackage[algoruled, portuguese]{algorithm2e} % Escrever algoritmos
 \usepackage{float} % Utilizado para criação d\input{diretrizes.cls}e floats
 \usepackage{times} % Usa a fonte Times
-
+\usepackage[final]{pdfpages}
 
 % Inclui o preâmbulo do documento
 \include{01-elementos-pre-textuais/preambulo}
@@ -54,13 +54,13 @@
     \pretextual
     \include{./01-elementos-pre-textuais/capa} % Capa
     \include{./01-elementos-pre-textuais/folhaRosto} % Folha de rosto
-    %\include{./01-elementos-pre-textuais/folhaAprovacao} % Folha de aprovação
-    %\include{./01-elementos-pre-textuais/folhaCatalografica}
-    %\include{./01-elementos-pre-textuais/dedicatoria} % Dedicatória
-    %\include{./01-elementos-pre-textuais/agradecimentos} % Agradecimentos
+    % \includepdf{./01-elementos-pre-textuais/fichaCatalografica.pdf}
+    % \include{./01-elementos-pre-textuais/folhaAprovacao} % Folha de aprovação
+    % \include{./01-elementos-pre-textuais/dedicatoria} % Dedicatória
+    % \include{./01-elementos-pre-textuais/agradecimentos} % Agradecimentos
     \include{./01-elementos-pre-textuais/epigrafe} % Epígrafe
-    %\include{./01-elementos-pre-textuais/resumoPt} % Resumo na língua vernácula
-    %\include{./01-elementos-pre-textuais/resumoEn} % Resumo em língua estrangeira
+    \include{./01-elementos-pre-textuais/resumoPt} % Resumo na língua vernácula
+    % \include{./01-elementos-pre-textuais/resumoEn} % Resumo em língua estrangeira
     \include{./01-elementos-pre-textuais/listaFiguras} % Lista de figuras
     %\include{./01-elementos-pre-textuais/listaTabelas} % Lista de tabelas
     %\include{./01-elementos-pre-textuais/listaQuadros} % Lista de quadros
@@ -71,8 +71,8 @@
     % Elementos textuais
     \textual
     \include{./02-elementos-textuais/introducao} 
-    \include{./02-elementos-textuais/arte-computacional} 
     \include{./02-elementos-textuais/interacao-e-participacao} 
+    \include{./02-elementos-textuais/arte-computacional} 
     \include{./02-elementos-textuais/luz-material} 
     \include{./02-elementos-textuais/composicao}
     \include{./02-elementos-textuais/consideracoes-finais}
@@ -82,6 +82,6 @@
     \include{./03-elementos-pos-textuais/referencias}       % Referências
     %\include{./03-elementos-pos-textuais/apendices}         % Apêndices
     %\include{./03-elementos-pos-textuais/anexos}            % Anexos
-    %\printindex                                             % Índice remissivo
+    \printindex                                             % Índice remissivo
 
 \end{document}
