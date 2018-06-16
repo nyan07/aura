@@ -12,7 +12,7 @@ Devido a alta precisão para captar objetos e movimentos optou-se pelo uso do se
 \vspace*{-0,9cm}
 {\raggedright \fonte{Elaborada pelo autor}}\\
 
-A seguir veremos um detalhamento de cada componente para a composição da obra, bem como aprofundaremos sobre o papel de cada um neste trabalho. 
+A seguir veremos um detalhamento dos componentes, bem como aprofundaremos sobre o papel de cada um deles neste trabalho. 
 
 \section{MICROSOFT KINECT}
 
@@ -30,7 +30,7 @@ O sensor Kinect é um dispositivo lançado em 4 de Novembro de 2010 como um aces
 
 Dentre seus componentes, o que mais nos interessa no contexto deste trabalho, é o sensor de profundidade. \citeonline{ashley} afirmam que a produção de dados tridimensionais é a principal função do Kinect. Ele difere de qualquer outro dispositivo de entrada justamente porque provê uma terceira dimensão e, para tanto, se utiliza de um emissor e uma câmera de infravermelho. Segundo \citeonline{lucero} o emissor de infravermelhos projeta um padrão estruturado de luz infravermelha, enquanto a câmera lê esses raios e interpreta a deformação da projeção, convertendo essa informação em valores de profundidade e, consequentemente, medindo a distância entre o objeto e o sensor. De acordo com \citeonline{correia} estas medidas baseiam-se em triangulação tendo em conta o emissor, a câmera e as posições dos pixels no cenário. A profundidade é codificada numa escala de cinzas. Quanto mais escuro o pixel, mais próximo do sensor está esse ponto no espaço. Sendo que, pixels pretos indicam que não existe informação de profundidade. Isto ocorre no caso dos pontos estarem muito longe, impossibilitando a sua captura, no caso de estarem numa área onde não haja pontos do emissor de infravermelhos, no caso de o objeto refletir mal a luz infravermelha ou, finalmente, no caso de os pontos estarem muito próximos do sensor, uma vez que o campo de visão do Kinect é limitado em cerca de 80 centímetros a 4 metros.
 
-Considerando as limitações do sensor Kinect, a que mais impactou este projeto, é causada pela própria natureza da luz projetada pelo sensor. A luz emitida pelo projetor de infravermelho, ao se deparar com um objeto, gera uma sombra em outro que esteja numa distância maior. Segundo \citeonline{lucero} o resultado é que não se pode determinar a profundidade em zonas afetadas por estas sombras, como pode ser visto na figura \ref{fig:kinect_sombras}. Dessa forma, estas sombras criam zonas negras na imagem de profundidade, ou seja, pixels com valor zero. O impacto gerado aqui é devido à malha de LEDs se encontrar entre o sensor Kinect e o espectador. A malha projeta uma sombra, criando pontos onde o espectador pode não ser percebido.  Mais detalhes sobre essa questão serão vistos na seção 5.3 Malha de LEDs e fibra ótica.
+Considerando as limitações do sensor Kinect, a que mais impactou este projeto é causada pela própria natureza da luz projetada pelo sensor. A luz emitida pelo projetor de infravermelho, ao se deparar com um objeto, gera uma sombra em outro que esteja numa distância maior. Segundo \citeonline{lucero} o resultado é que não se pode determinar a profundidade em zonas afetadas por estas sombras, como pode ser visto na figura \ref{fig:kinect_sombras}. Dessa forma, estas sombras criam zonas negras na imagem de profundidade, ou seja, pixels com valor zero. O impacto gerado aqui é devido à malha de LEDs se encontrar entre o sensor Kinect e o espectador. A malha projeta uma sombra, criando pontos onde o espectador pode não ser percebido.  Mais detalhes sobre essa questão serão vistos na seção \ref{sec:malha} \nameref{sec:malha}.
 
 \begin{figure}[H]
     \centering
@@ -58,18 +58,19 @@ O Microsoft Kinect foi utilizado como fonte de entrada de dados para mapear o am
 
 \section{ARDUINO}
 
-Para compreender o que é e para que serve o Arduino, podemos analisar a descrição presente no site oficial do projeto:
+Para compreender o que é e para que serve o Arduino, podemos analisar a descrição presente no \textit{site} oficial do projeto:
 
 \begin{citacao}
-Arduino é uma plataforma de prototipagem eletrônica de hardware livre e de placa única. O objetivo do projeto é criar ferramentas que são acessíveis, com baixo custo, flexíveis e fáceis de usar. Placas arduíno são capazes de ler uma entrada como a luz em um sensor, um dedo pressionando um botão ou uma mensagem do Twitter e transformá-la em uma saída como ativar um motor, ligar um LED ou publicar alguma coisa na internet, por exemplo. É possível dizer à placa o que fazer enviando uma série de instruções ao microcontrolador. Para isso é necessário utilizar a linguagem de programação do Arduino (baseada em Wiring) e o seu software (IDE - \textit{Integrated Development Environment} ou Ambiente de Desenvolvimento Integrado), baseada em Processing \cite{arduino}. 
+Arduino é uma plataforma de prototipagem eletrônica de \textit{hardware} livre e de placa única. O objetivo do projeto é criar ferramentas que são acessíveis, com baixo custo, flexíveis e fáceis de usar. Placas arduíno são capazes de ler uma entrada como a luz em um sensor, um dedo pressionando um botão ou uma mensagem do Twitter e transformá-la em uma saída como ativar um motor, ligar um LED ou publicar alguma coisa na internet, por exemplo. É possível dizer à placa o que fazer enviando uma série de instruções ao microcontrolador. Para isso é necessário utilizar a linguagem de programação do Arduino (baseada em Wiring) e o seu software (IDE - \textit{Integrated Development Environment} ou Ambiente de Desenvolvimento Integrado), baseada em Processing \cite{arduino}. 
 \end{citacao}
 
 Neste trabalho o Arduino foi utilizado para controlar os circuitos da malha de LEDs (saída ou \textit{output}) recebendo as informações mapeadas pelo sensor Kinect (entrada ou \textit{input}). Cada LED precisa ser controlado individualmente, por isso optou-se pela utilização do Arduino Mega que possui 54 entradas/saídas digitais, sendo a placa disponível com o maior número de entradas/saídas.
 
 
 \section{MALHA DE LEDS E FIBRA ÓTICA}
+\label{sec:malha}
 
-Será construída uma malha de LEDs formada por quatro módulos de 120 x 80 cm, formando uma área total de 2,4 x 1,6 metros onde o espectador pode interagir com a mesma. As grades possuem intercesções a cada 20 centímetros, tanto na horizontal quanto na vertical e cada intersecção possui um LED preso à ela. Na figura \ref{fig:malha} podemos ver um esquema dessa estrutura, sendo que, são apresentados exemplos de apenas 3 LEDs para não poluir o esquema.
+Será construída uma malha de LEDs formada por quatro módulos de 120 x 80 cm, formando uma área total de 2,4 x 1,6 metros onde o espectador pode interagir com a mesma. As grades possuem intercesções a cada 20 centímetros, em ambos os sentidos, e cada intersecção possui um LED preso à ela. Na figura \ref{fig:malha} podemos ver um esquema dessa estrutura, sendo que, são apresentados exemplos de apenas 3 LEDs para não poluir o esquema.
 
 \begin{figure}[H]
     \centering
