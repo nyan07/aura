@@ -1,10 +1,10 @@
 \chapter{COMPOSIÇÃO DA OBRA}
 
-Devido a alta precisão para captar objetos e movimentos optou-se pelo uso do sensor Microsoft Kinect que, conectado a um computador, é responsável por captar a área onde os espectadores se encontram. Integrando-o a uma placa Arduino é possível controlar uma série de LEDs, dispostos em uma grade pendente ao teto. Cada LED possui cabos de fibra ótica \textit{side light} (com emissão de luz lateral) conectados à ele que se iluminam conforme os espectadores caminham sob a grade. Na figura \ref{fig:esquema} podemos ver um esquema de montagem da obra, sendo que, o sensor Kinect fica preso junto ao teto, a grade com os LEDs se encontra abaixo, a pouco mais de 1 metro de distância, deixando espaço suficiente para os transeuntes.
+Devido a alta precisão para captar objetos e movimentos optou-se pelo uso do sensor Microsoft Kinect que, conectado a um computador, é responsável por captar a área onde os espectadores se encontram. Integrando-o a uma placa Arduino é possível controlar uma série de LEDs, dispostos em uma grade pendente ao teto. Cada LED possui cabos de fibra ótica \textit{side light} (com emissão de luz lateral) conectados à ele que se iluminam conforme os espectadores caminham sob a grade. Na figura \ref{fig:esquema} podemos ver um esquema de montagem da obra, sendo que, o sensor Kinect fica preso junto ao teto, a grade com os LEDs se encontra abaixo, a pouco mais de um metro de distância, deixando espaço suficiente para os transeuntes.
 
 \begin{figure}[H]
     \centering
-    \caption{Esquema de montagem da obra. (falta computador e arduino)}
+    \caption{Esquema de montagem da obra.}
 	\vspace*{0,2cm}
     \includegraphics[width=0.8\textwidth]{./04-figuras/esquema}
     \label{fig:esquema}
@@ -12,7 +12,7 @@ Devido a alta precisão para captar objetos e movimentos optou-se pelo uso do se
 \vspace*{-0,9cm}
 {\raggedright \fonte{Elaborada pelo autor}}\\
 
-A seguir veremos um detalhamento dos componentes, bem como aprofundaremos sobre o papel de cada um deles neste trabalho. 
+A seguir veremos um detalhamento dos componentes e nos aprofundaremos sobre o papel de cada um deles neste trabalho. 
 
 \section{MICROSOFT KINECT}
 
@@ -43,7 +43,7 @@ Considerando as limitações do sensor Kinect, a que mais impactou este projeto 
 {\raggedright \fonte{\citeonline{lucero}}}\\
 
 
-O Microsoft Kinect foi utilizado como fonte de entrada de dados para mapear o ambiente tridimensional e com ajuda da Processing\footnote{Processing é uma plataforma e uma linguagem de programação para prototipação de software dentro do contexto das artes visuais. Desde 2001, a Processing promoveu a alfabetização em software dentro das artes visuais e a alfabetização visual dentro da tecnologia. Há dezenas de milhares de estudantes, artistas, designers, pesquisadores e amadores que usam Processing para aprender e criar protótipos (PROCESSING, 2018).} criar uma malha bidimensional que, mais tarde, é transferida para a estrutura de LEDs. A figura \ref{fig:kinect_exemplo} mostra um exemplo de imagem gerada a partir dos dados capturados pelo sensor. Cada ponto branco apresentado na figura representa um LED aceso na estrutura física, enquanto a área em preto demarca os intervalos entre os mesmos. Não há distinção, na imagem, entre estes intervalos e os LEDs apagados. 
+O Microsoft Kinect foi utilizado como fonte de entrada (\textit{input}) de dados para mapear o ambiente tridimensional. Um programa escrito em \textit{Processing}\footnote{\textit{Processing} é uma plataforma e uma linguagem de programação para prototipação de \textit{software} dentro do contexto das artes visuais. Desde 2001, a \textit{Processing} promoveu a alfabetização em \textit{software} dentro das artes visuais e a alfabetização visual dentro da tecnologia. Há dezenas de milhares de estudantes, artistas, designers, pesquisadores e amadores que usam \textit{Processing} para aprender e criar protótipos (PROCESSING, 2018).}, captura as informações fornecidas pelo Kinect e gera uma imagem bidimensional que, mais tarde, é reproduzida na estrutura de LEDs. A figura \ref{fig:kinect_exemplo} mostra um exemplo de imagem criada a partir dos dados capturados pelo sensor. Cada ponto branco apresentado na figura representa um LED aceso na estrutura física, enquanto a área em preto demarca os intervalos entre os mesmos. Não há distinção, na imagem, entre estes intervalos e os LEDs apagados. 
 
 \begin{figure}[H]
     \centering
@@ -64,13 +64,12 @@ Para compreender o que é e para que serve o Arduino, podemos analisar a descri�
 Arduino é uma plataforma de prototipagem eletrônica de \textit{hardware} livre e de placa única. O objetivo do projeto é criar ferramentas que são acessíveis, com baixo custo, flexíveis e fáceis de usar. Placas arduíno são capazes de ler uma entrada como a luz em um sensor, um dedo pressionando um botão ou uma mensagem do Twitter e transformá-la em uma saída como ativar um motor, ligar um LED ou publicar alguma coisa na internet, por exemplo. É possível dizer à placa o que fazer enviando uma série de instruções ao microcontrolador. Para isso é necessário utilizar a linguagem de programação do Arduino (baseada em Wiring) e o seu software (IDE - \textit{Integrated Development Environment} ou Ambiente de Desenvolvimento Integrado), baseada em Processing \cite{arduino}. 
 \end{citacao}
 
-Neste trabalho o Arduino foi utilizado para controlar os circuitos da malha de LEDs (saída ou \textit{output}) recebendo as informações mapeadas pelo sensor Kinect (entrada ou \textit{input}). Cada LED precisa ser controlado individualmente, por isso optou-se pela utilização do Arduino Mega que possui 54 entradas/saídas digitais, sendo a placa disponível com o maior número de entradas/saídas.
+Neste trabalho o Arduino foi utilizado para controlar os circuitos da malha de LEDs (saída ou \textit{output}) recebendo as informações mapeadas pelo sensor Kinect (entrada ou \textit{input}). Cada LED precisa ser controlado individualmente, por isso, à princípio, optou-se pela utilização do Arduino Mega que possui 54 entradas/saídas digitais, sendo a placa disponível com o maior número de entradas/saídas. Ainda se encontra em definição a maneira como o trabalho será escalado para atingir as dimensões propostas na próxima sessão deste capítulo. Considera-se a possibilidade de utilizar mais de uma placa Arduino, circuitos multiplexadores - que permitem que em uma única porta sejam conectados mais de um LED -, ou ainda, a construção de uma placa sob medida.
 
-
-\section{MALHA DE LEDS E FIBRA ÓTICA}
+\section{MALHA DE LEDS}
 \label{sec:malha}
 
-Será construída uma malha de LEDs formada por quatro módulos de 120 x 80 cm, formando uma área total de 2,4 x 1,6 metros onde o espectador pode interagir com a mesma. As grades possuem intercesções a cada 20 centímetros, em ambos os sentidos, e cada intersecção possui um LED preso à ela. Na figura \ref{fig:malha} podemos ver um esquema dessa estrutura, sendo que, são apresentados exemplos de apenas 3 LEDs para não poluir o esquema.
+Será construída uma grade de LEDs formada por quatro módulos de 120 x 80 cm, formando uma área total de 2,4 x 1,6 metros onde o espectador pode interagir com a obra. As grades possuem intercesções a cada 20 centímetros, em ambos os sentidos, e cada intersecção possui um LED preso à ela. Na figura \ref{fig:malha} podemos ver um esquema dessa estrutura, sendo que, são apresentados exemplos de apenas 3 LEDs para não poluir o esquema.
 
 \begin{figure}[H]
     \centering
@@ -81,4 +80,9 @@ Será construída uma malha de LEDs formada por quatro módulos de 120 x 80 cm, 
 \end{figure}
 \vspace*{-0,9cm}
 {\raggedright \fonte{Elaborada pela autora}}\\
+
+Cada LED vai contar com fios de fibra ótica, com emissão de luz lateral, de várias espessuras presos em sua extremidade. Quando o LED acender, a partir da interação com o usuário, a luz será transmitida pela fibra ótica, criando vários pontos iluminados.
+
+
+   
 
