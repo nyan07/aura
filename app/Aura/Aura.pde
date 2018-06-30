@@ -25,6 +25,7 @@ void setup() {
   arduino.pinMode(12, Arduino.OUTPUT);
   
   img = createImage(kinect.width, kinect.height, RGB);
+  
 }
 
 void draw() {
@@ -45,17 +46,18 @@ void draw() {
       if (distanceInmeters > minThresh && distanceInmeters < maxThresh) {  
         img.pixels[offset] = color(255, 255, 255);
         ellipse(offset, offset, 30, 30);
-        
-        if (x == 128) {
-          if (y >= 0 && y < 128) {
+               
+        if (y == 128) {
+           println(">>>>" + x + " " + y);
+          if (x >= 0 && x < 128) {
              arduino.digitalWrite(8, Arduino.HIGH);
-          } else if (y >= 128 && y < 256) {
+          } else if (x >= 128 && x < 256) {
              arduino.digitalWrite(9, Arduino.HIGH);        
-          }  else if (y >= 256 && y < 384) {
+          }  else if (x >= 256 && x < 384) {
              arduino.digitalWrite(10, Arduino.HIGH);        
-          } else if (y >= 384 && y < 512) {
+          } else if (x >= 384 && x < 512) {
              arduino.digitalWrite(11, Arduino.HIGH);        
-          } else {
+          } else {      
              arduino.digitalWrite(12, Arduino.HIGH);        
           }
         }
@@ -63,14 +65,14 @@ void draw() {
       } else {
         img.pixels[offset] = color(0, 0, 0);
         
-        if (x == 128) {
-          if (y >= 0 && y < 128) {
+        if (y == 128) {
+          if (x >= 0 && x < 128) {
              arduino.digitalWrite(8, Arduino.LOW);
-          } else if (y >= 128 && y < 256) {
+          } else if (x >= 128 && x < 256) {
              arduino.digitalWrite(9, Arduino.LOW);        
-          }  else if (y >= 256 && y < 384) {
+          }  else if (x >= 256 && x < 384) {
              arduino.digitalWrite(10, Arduino.LOW);        
-          } else if (y >= 384 && y < 480) {
+          } else if (x >= 384 && x < 480) {
              arduino.digitalWrite(11, Arduino.LOW);        
           } else {
              arduino.digitalWrite(12, Arduino.LOW);        
