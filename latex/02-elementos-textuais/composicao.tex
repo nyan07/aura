@@ -1,6 +1,6 @@
 \chapter{COMPOSIÇÃO DA OBRA}
 
-Devido a alta precisão para captar objetos e movimentos optou-se pelo uso do sensor Microsoft Kinect que, conectado a um computador, é responsável por captar a área onde os espectadores se encontram. Integrando-o a uma placa Arduino é possível controlar uma série de LEDs, dispostos em uma grade pendente ao teto. Cada LED possui cabos de fibra ótica \textit{side light} (com emissão de luz lateral) conectados à ele que se iluminam conforme os espectadores caminham sob a grade. Na figura \ref{fig:esquema} podemos ver um esquema de montagem da obra, sendo que, o sensor Kinect fica preso junto ao teto, a grade com os LEDs se encontra abaixo, a pouco mais de um metro de distância, deixando espaço suficiente para os transeuntes.
+Devido a alta precisão para captar objetos e movimentos optou-se pelo uso do sensor Microsoft Kinect que, conectado a um computador, é responsável por captar a área onde os espectadores se encontram. Integrando-o a uma placa Arduino é possível controlar uma série de LEDs, dispostos em uma grade pendente ao teto. Cada LED possui cabos de fibra ótica \textit{side light} (com emissão de luz lateral) conectados à ele que se iluminam conforme os espectadores caminham sob a grade. Na figura \ref{fig:esquema} podemos ver um esquema de montagem da obra, sendo que, o sensor Kinect fica preso junto ao teto, a grade com os LEDs se encontra abaixo, a pouco mais de um metro de distância, deixando espaço suficiente para os espectadores transitarem.
 
 \begin{figure}[H]
     \centering
@@ -69,7 +69,7 @@ Neste trabalho o Arduino foi utilizado para controlar os circuitos da malha de L
 \section{MALHA DE LEDS}
 \label{sec:malha}
 
-Será construída uma grade de LEDs formada por quatro módulos de 120 x 80 cm, formando uma área total de 2,4 x 1,6 metros onde o espectador pode interagir com a obra. As grades possuem intercesções a cada 20 centímetros, em ambos os sentidos, e cada intersecção possui um LED preso à ela. Na figura \ref{fig:malha} podemos ver um esquema dessa         , sendo que, são apresentados exemplos de apenas 3 LEDs para não poluir o esquema.
+Será construída uma grade de LEDs formada por quatro módulos de 120 x 80 cm, constituindo uma área total de 2,4 x 1,6 metros onde o espectador pode interagir com a obra. As grades possuem intercesções a cada 20 centímetros, em ambos os sentidos, e cada intersecção possui um LED preso à ela. Na figura \ref{fig:malha} podemos ver um esquema dessa grade, sendo que, são apresentados exemplos de apenas 3 LEDs para não poluir o esquema.
 
 \begin{figure}[H]
     \centering
@@ -81,8 +81,34 @@ Será construída uma grade de LEDs formada por quatro módulos de 120 x 80 cm, 
 \vspace*{-0,9cm}
 {\raggedright \fonte{Elaborada pela autora}}\\
 
-Cada LED vai contar com fios de fibra ótica, com emissão de luz lateral, de várias espessuras presos em sua extremidade. Quando o LED acender, a partir da interação com o usuário, a luz será transmitida pela fibra ótica, criando vários pontos iluminados.
+Cada LED vai contar com fios de fibra ótica, com emissão de luz lateral, de várias espessuras presos em sua extremidade. Quando o LED acender, a partir da interação com o usuário, a luz será transmitida pela fibra ótica, gerando vários pontos iluminados.
 
+
+\section{PROTÓTIPO}
+
+Para validar o projeto foi construído um protótipo que conta com o Microsoft Kinect, um computador, um Arduino e 5 LEDs conectados à ele conforme pode ser visto na figura \ref{fig:prototipo}. 
+
+\begin{figure}[H]
+    \centering
+    \caption{Componentes do prótotipo}
+	\vspace*{0,2cm}
+    \includegraphics[width=0.8\textwidth]{./04-figuras/prototipo}
+    \label{fig:prototipo}
+\end{figure}
+\vspace*{-0,9cm}
+{\raggedright \fonte{Elaborada pela autora}}\\
+
+Na figura \ref{fig:prototipo-escuro} podemos ver uma amostra do protótipo sendo executado em um ambiente com baixa luminosidade, o que reforça a escolha do cubo preto como sendo o melhor cenário para exibição desse trabalho.
+ 
+\begin{figure}[H]
+    \centering
+    \caption{Protótipo em ambiente com baixa luminosidade}
+	\vspace*{0,2cm}
+    \includegraphics[width=0.8\textwidth]{./04-figuras/prototipo_escuro}
+    \label{fig:prototipo-escuro}
+\end{figure}
+\vspace*{-0,9cm}
+{\raggedright \fonte{Elaborada pela autora}}\\
 
    
 
