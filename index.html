@@ -1,0 +1,147 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <title>Aura: luz e tecnologia aplicadas na arte</title>
+        <link rel="stylesheet" href="css/reveal.css">
+        <link rel="stylesheet" href="css/theme/solarized.css" id="theme">
+        <!-- For syntax highlighting -->
+        <link rel="stylesheet" href="lib/css/zenburn.css">
+
+        <!-- If the query includes 'print-pdf', use the PDF print sheet -->
+        <script>
+          document.write( '<link rel="stylesheet" href="css/print/' + ( window.location.search.match( /print-pdf/gi ) ? 'pdf' : 'paper' ) + '.css" type="text/css" media="print">' );
+        </script>
+    </head>
+    <body>
+
+        <div class="reveal">
+            <div class="slides"><section  data-markdown><script type="text/template"># Aura: arte e tecnologia aplicadas na arte
+<hr />
+
+#### Daniela Feitosa Araújo
+
+<small>Porto Alegre 2018</small>
+</script></section><section  data-markdown><script type="text/template">
+## Agenda
+
+- Introdução
+- Interação e participação
+- Arte computacional e interatividade
+- A luz como material e o cubo preto
+- Composição da obra
+- Desafios
+- Próximos passos
+- Trabalhos futuros
+</script></section><section ><section data-markdown><script type="text/template">
+# Introdução
+
+</script></section><section data-markdown><script type="text/template">
+## Arte computacional
+</script></section><section data-markdown><script type="text/template">
+## Luz
+</script></section><section data-markdown><script type="text/template">
+## Motivações 
+</script></section></section><section ><section data-markdown><script type="text/template">
+# Interação e participação
+</script></section><section data-markdown><script type="text/template">
+## Da contemplação à interação
+</script></section><section data-markdown><script type="text/template">
+## O espectador como co-autor
+</script></section><section data-markdown><script type="text/template">
+## Arte efêmera
+</script></section><section data-markdown><script type="text/template">
+## Arte interativa
+</script></section></section><section  data-markdown><script type="text/template">
+# Arte computacional e interatividade
+</script></section><section ><section data-markdown><script type="text/template">
+# A luz como material e o cubo preto
+</script></section><section data-markdown><script type="text/template">
+## James Turell
+</script></section><section data-markdown><script type="text/template">
+##  Takahito Matsuo
+</script></section><section data-markdown><script type="text/template">
+## Jim Campbell
+</script></section><section data-markdown><script type="text/template">
+## O cubo preto
+</script></section></section><section ><section data-markdown><script type="text/template">
+# Composição da obra
+</script></section><section data-markdown><script type="text/template">
+## Microsoft Kinect
+</script></section><section data-markdown><script type="text/template">
+## Arduino
+</script></section><section data-markdown><script type="text/template">
+## Malha de LEDs e fibra ótica
+</script></section><section data-markdown><script type="text/template">
+## Protótipo
+</script></section></section><section  data-markdown><script type="text/template">
+# Desafios
+
+- Escalando o trabalho
+- Instalação e local expositivo
+- Custo
+</script></section><section  data-markdown><script type="text/template">
+# Próximos passos
+
+- Montar a primeira grade de LEDs
+- Alterar o script para funcionar com uma matriz
+</script></section><section  data-markdown><script type="text/template">
+# Trabalhos futuros
+
+- Blink
+- Fade in/out
+- Cores
+</script></section><section  data-markdown><script type="text/template">
+# Obrigada
+</script></section></div>
+        </div>
+
+        <script src="lib/js/head.min.js"></script>
+        <script src="js/reveal.js"></script>
+
+        <script>
+            function extend() {
+              var target = {};
+              for (var i = 0; i < arguments.length; i++) {
+                var source = arguments[i];
+                for (var key in source) {
+                  if (source.hasOwnProperty(key)) {
+                    target[key] = source[key];
+                  }
+                }
+              }
+              return target;
+            }
+
+            // Optional libraries used to extend on reveal.js
+            var deps = [
+              { src: 'lib/js/classList.js', condition: function() { return !document.body.classList; } },
+              { src: 'plugin/markdown/marked.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: 'plugin/markdown/markdown.js', condition: function() { return !!document.querySelector('[data-markdown]'); } },
+              { src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } },
+              { src: 'plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+              { src: 'plugin/math/math.js', async: true }
+            ];
+
+            // default options to init reveal.js
+            var defaultOptions = {
+              controls: true,
+              progress: true,
+              history: true,
+              center: true,
+              transition: 'default',
+              dependencies: deps
+            };
+
+            // options from URL query string
+            var queryOptions = Reveal.getQueryHash() || {};
+
+            var options = {};
+            options = extend(defaultOptions, options, queryOptions);
+            Reveal.initialize(options);
+        </script>
+        
+          <script src="/scripts/talk"></script>
+    </body>
+</html>
+
