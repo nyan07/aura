@@ -1,0 +1,16 @@
+{
+  "name": "aura",
+  "version": "0.0.1",
+  "description": "Apresentação de trabalho de conclusão de curso",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "reveal-md slides.md --theme solarized --title 'Aura: luz e tecnologia aplicadas na arte'",
+    "build": "mkdir -p dist && cp -r images dist && cp -r node_modules/reveal.js/{css,js,lib,plugin} dist && reveal-md slides.md --theme solarized --title 'Aura: luz e tecnologia aplicadas na arte' --static > dist/index.html",
+    "deploy": "npm run build && gh-pages -d dist"
+  },
+  "dependencies": {
+    "gh-pages": "^0.11.0",
+    "reveal-md": "0.0.30"
+  }
+}
