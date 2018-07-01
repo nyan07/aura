@@ -1,6 +1,6 @@
 \chapter{COMPOSIÇÃO DA OBRA}
 
-Devido a alta precisão para captar objetos e movimentos optou-se pelo uso do sensor Microsoft Kinect que, conectado a um computador, é responsável por captar a área onde os espectadores se encontram. Integrando-o a uma placa Arduino é possível controlar uma série de LEDs, dispostos em uma grade pendente ao teto. Cada LED possui cabos de fibra ótica \textit{side light} (com emissão de luz lateral) conectados à ele que se iluminam conforme os espectadores caminham sob a grade. Na figura \ref{fig:esquema} podemos ver um esquema de montagem da obra, sendo que, o sensor Kinect fica preso junto ao teto, a grade com os LEDs se encontra abaixo, a pouco mais de um metro de distância, deixando espaço suficiente para os espectadores transitarem.
+Devido ao recurso de capturar objetos e movimentos no espaço, optou-se pelo uso do sensor Microsoft Kinect que, conectado a um computador, é responsável por captar a área onde os espectadores se encontram. Integrando-o a uma placa Arduino é possível controlar uma série de LEDs, dispostos em uma grade pendente ao teto. Cada LED possui cabos de fibra ótica \textit{side light} (com emissão de luz lateral) conectados à ele que se iluminam conforme os espectadores caminham sob a grade. Na figura \ref{fig:esquema} podemos ver um esquema de montagem da obra, sendo que, o sensor Kinect fica preso junto ao teto, a grade com os LEDs se encontra abaixo, a pouco mais de um metro de distância, deixando espaço suficiente para os espectadores transitarem.
 
 \begin{figure}[H]
     \centering
@@ -47,7 +47,7 @@ O Microsoft Kinect foi utilizado como fonte de entrada (\textit{input}) de dados
 
 \begin{figure}[H]
     \centering
-    \caption{Exemplo de imagem gerada a partir  das informações capturadas  pelo sensor Kinect.}
+    \caption{Imagem gerada a partir  das informações capturadas  pelo sensor Kinect.}
 	\vspace*{0,2cm}
     \includegraphics[width=0.8\textwidth]{./04-figuras/kinect_exemplo}
     \label{fig:kinect_exemplo}
@@ -86,7 +86,7 @@ Cada LED vai contar com fios de fibra ótica, com emissão de luz lateral, de v�
 
 \section{PROTÓTIPO}
 
-Para validar o projeto foi construído um protótipo que conta com o Microsoft Kinect, um computador, um Arduino e 5 LEDs conectados à ele conforme pode ser visto na figura \ref{fig:prototipo}. 
+Para validar o projeto foi construído um protótipo que conta com o Microsoft Kinect, um computador, um Arduino e 5 LEDs conectados à ele conforme pode ser visto na figura \ref{fig:prototipo}. Através da utilização de duas bibliotecas, \textit{Open Kinect for Processing} e Arduino (Firmata), foi possível construir um \textit{script} que controla os dispositivos de entrada e saída de forma integrada, causando assim o acender e apagar dos LEDs de acordo com a presença do espectador.
 
 \begin{figure}[H]
     \centering
@@ -111,4 +111,3 @@ Na figura \ref{fig:prototipo-escuro} podemos ver uma amostra do protótipo sendo
 {\raggedright \fonte{Elaborada pela autora}}\\
 
    
-
