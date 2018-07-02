@@ -65,7 +65,15 @@
 
 ----
 
-## James Turell
+## James Turrell
+
+----
+
+<video width="800" height="460" autoplay loop muted>
+  <source src="images/james_turrell.mp4" type="video/mp4">
+</video>
+
+<small>"The light inside", 1999, James Turrell.</small>
 
 ----
 
