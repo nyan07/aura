@@ -81,6 +81,14 @@
 
 ----
 
+<video width="800" height="460" autoplay loop muted>
+  <source src="images/takahito_matsuo.mp4" type="video/mp4">
+</video>
+
+<small>"Fantasias Aquáticas Iluminadas", 2009, Takahito Matsuo.</small>
+
+----
+
 ## Jim Campbell
 
 ----
