@@ -22,18 +22,18 @@
 
 # Introdução
 
+----
+
+## Motivações 
 
 ----
 
 ## Arte computacional
+"envolve sistemas computacionais tanto nos seus processos de criação e produção quanto na forma de apresentação" (BOONE, 2013)
 
 ----
 
 ## Luz
-
-----
-
-## Motivações 
 
 ---
 
@@ -137,6 +137,7 @@
 - Blink
 - Fade in/out
 - Cores
+- Cortina de LEDs
 
 ---
 

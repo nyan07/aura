@@ -5,8 +5,8 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "reveal-md slides.md --theme black --title 'Aura: luz e tecnologia aplicadas na arte'",
-    "build": "mkdir -p dist && cp -r images dist && cp -r node_modules/reveal.js/{css,js,lib,plugin} dist && reveal-md slides.md --theme black --title 'Aura: luz e tecnologia aplicadas na arte' --static > dist/index.html",
+    "start": "reveal-md slides.md --theme moon --title 'Aura: luz e tecnologia aplicadas na arte'",
+    "build": "mkdir -p dist && cp -r images dist && cp -r node_modules/reveal.js/{css,js,lib,plugin} dist && reveal-md slides.md --theme moon --title 'Aura: luz e tecnologia aplicadas na arte' --static > dist/index.html",
     "deploy": "npm run build && gh-pages -d dist"
   },
   "dependencies": {
