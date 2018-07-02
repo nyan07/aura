@@ -77,6 +77,22 @@
 
 ----
 
+<video width="800" height="460" autoplay loop muted>
+  <source src="images/jim_campbell_1.mp4" type="video/mp4">
+</video>
+
+<small>"Light Topography (Jane's Pool)", 2014, Jim Campbell. Fonte: KQED</small>
+
+----
+
+<video width="800" height="460" autoplay loop muted>
+  <source src="images/jim_campbell_2.mp4" type="video/mp4">
+</video>
+
+<small>"The Journey",  2013, Jim Campbell, localizada no Aeroporto Internacional de San Diego. Fonte: KQED</small>
+
+----
+
 ## O cubo preto
 
 ---
