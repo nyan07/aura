@@ -175,9 +175,9 @@
 
 # Próximos passos
 
-- Montar a primeira grade de LEDs
+- Montar a grade de LEDs
 - Alterar o script para funcionar com uma matriz
-- Buscar alternativa para o problema das sombras e da area de captura do Kinect
+- Buscar alternativa para o problema das sombras
 
 ---
 
