@@ -16,24 +16,10 @@
 - Composição da obra
 - Desafios
 - Próximos passos
-- Trabalhos futuros
 
 ---
 
-# Introdução
-
-----
-
-## Motivações 
-
-----
-
-## Arte computacional
-"envolve sistemas computacionais tanto nos seus processos de criação e produção quanto na forma de apresentação" (BOONE, 2013)
-
-----
-
-## Luz
+# Introdução 
 
 ---
 
@@ -41,23 +27,35 @@
 
 ----
 
-## Da contemplação à interação
+# Da contemplação à interação
 
 ----
 
-## O espectador como co-autor
+# O espectador<br>como co-autor
 
 ----
 
-## Arte efêmera
+# Efemeridade na arte computacional
 
 ----
 
-## Arte interativa
+# Obra de arte<br>em tempo real
 
 ---
 
 # Arte computacional e interatividade
+
+----
+
+# Arte computacional
+
+> "envolve sistemas computacionais tanto nos seus processos de criação e produção quanto na forma de apresentação"
+>
+> <cite>BOONE, 2013</cite>
+
+----
+
+# Interatividade na arte computacional
 
 ---
 
@@ -65,9 +63,15 @@
 
 ----
 
-## James Turrell
+# A luz como objeto ou material 
+
+> "alguns artistas e movimentos estéticos estão fortemente relacionados com a linguagem da luz, mesmo quando não a utilizam como objeto central da obra"
+>
+> <cite>Brandi (2015)</cite>
 
 ----
+
+# James Turrell
 
 <video width="800" height="460" autoplay loop muted>
   <source src="images/james_turrell.mp4" type="video/mp4">
@@ -77,9 +81,7 @@
 
 ----
 
-##  Takahito Matsuo
-
-----
+#  Takahito Matsuo
 
 <video width="800" height="460" autoplay loop muted>
   <source src="images/takahito_matsuo.mp4" type="video/mp4">
@@ -89,9 +91,7 @@
 
 ----
 
-## Jim Campbell
-
-----
+# Jim Campbell
 
 <video width="800" height="460" autoplay loop muted>
   <source src="images/jim_campbell_1.mp4" type="video/mp4">
@@ -101,6 +101,8 @@
 
 ----
 
+# Jim Campbell
+
 <video width="800" height="460" autoplay loop muted>
   <source src="images/jim_campbell_2.mp4" type="video/mp4">
 </video>
@@ -109,27 +111,57 @@
 
 ----
 
-## O cubo preto
+# O cubo preto
+
+> "a maioria dos autores que trabalham com arte e tecnologia procuram o espaço do cubo preto como espaço expositivo"
+> 
+> <cite>Soares (2013)</cite>
 
 ---
 
 # Composição da obra
 
-----
-
-## Microsoft Kinect
+<img src="images/esquema.png" height="460" />
 
 ----
 
-## Arduino
+# Microsoft Kinect
+
+<img src="images/kinect_componentes.png" />
 
 ----
 
-## Malha de LEDs e fibra ótica
+## Sombras 
+
+<img src="images/kinect_sombras.jpg" />
 
 ----
 
-## Protótipo
+# Arduino
+
+----
+
+# Malha de LEDs e fibra ótica
+
+----
+
+# Protótipo
+
+----
+
+## Ambiente iluminado
+
+<video width="800" height="460" autoplay loop muted>
+  <source src="images/prototipo_luz.mp4" type="video/mp4">
+</video>
+
+----
+
+## Ambiente com baixa luminosidade
+
+<video width="800" height="460" autoplay loop muted>
+  <source src="images/prototipo_escuro.mp4" type="video/mp4">
+</video>
 
 ---
 
@@ -145,15 +177,7 @@
 
 - Montar a primeira grade de LEDs
 - Alterar o script para funcionar com uma matriz
-
----
-
-# Trabalhos futuros
-
-- Blink
-- Fade in/out
-- Cores
-- Cortina de LEDs
+- Buscar alternativa para o problema das sombras e da area de captura do Kinect
 
 ---
 
