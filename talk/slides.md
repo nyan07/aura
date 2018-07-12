@@ -1,4 +1,4 @@
-# Aura: arte e tecnologia aplicadas na arte
+# Aura: luz e tecnologia aplicadas na arte
 <hr />
 
 #### Daniela Feitosa Araújo
