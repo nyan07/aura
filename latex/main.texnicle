@@ -75,7 +75,7 @@
         <relationship name="project" type="1/1" destination="PROJECT" idrefs="z104"></relationship>
     </object>
     <object type="UISETTINGS" id="z103">
-        <attribute name="pdfviewscrollrect" type="string">{{0, 46}, {604, 836}}</attribute>
+        <attribute name="pdfviewscrollrect" type="string">{{0, 11479}, {604, 836}}</attribute>
         <attribute name="showpdfthumbnails" type="bool">0</attribute>
         <attribute name="selectedcontrolstab" type="int16">0</attribute>
         <attribute name="maxoutlinedepth" type="int16">7</attribute>
@@ -90,20 +90,20 @@
         <attribute name="name" type="string">main</attribute>
         <attribute name="folder" type="string">/Users/dfaraujo/aura/latex</attribute>
         <relationship name="mainfile" type="1/1" destination="FILE" idrefs="z125"></relationship>
-        <relationship name="selected" type="1/1" destination="FILE" idrefs="z135"></relationship>
+        <relationship name="selected" type="1/1" destination="FILE" idrefs="z120"></relationship>
         <relationship name="settings" type="1/1" destination="SETTINGS" idrefs="z102"></relationship>
         <relationship name="uisettings" type="1/1" destination="UISETTINGS" idrefs="z103"></relationship>
-        <relationship name="items" type="0/0" destination="PROJECTITEM" idrefs="z112 z126 z120 z124 z121 z131 z127 z133 z134 z106 z129 z117 z115 z123 z118 z114 z122 z109 z105 z108 z107 z113 z132 z110 z111 z135 z130 z125 z119 z116"></relationship>
+        <relationship name="items" type="0/0" destination="PROJECTITEM" idrefs="z125 z119 z111 z116 z124 z132 z130 z105 z114 z112 z133 z123 z110 z120 z118 z115 z126 z117 z121 z131 z127 z134 z106 z108 z109 z129 z107 z122 z113 z135"></relationship>
     </object>
     <object type="TEXFILE" id="z105">
-        <attribute name="visiblerect" type="string">{{0, 2911}, {723, 588.5}}</attribute>
-        <attribute name="cursor" type="string">{8798, 19}</attribute>
-        <attribute name="wasopen" type="bool">3</attribute>
+        <attribute name="visiblerect" type="string">{{0, 5}, {729, 557.5}}</attribute>
+        <attribute name="cursor" type="string">{0, 0}</attribute>
+        <attribute name="wasopen" type="bool">0</attribute>
         <attribute name="lasteditdate" type="date">553052161.12952995300292968750</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">553052160.94862103462219238281</attribute>
+        <attribute name="fileloaddate" type="date">553061266.80712103843688964844</attribute>
         <attribute name="extension" type="string">tex</attribute>
-        <attribute name="sortindex" type="int32">16</attribute>
+        <attribute name="sortindex" type="int32">17</attribute>
         <attribute name="name" type="string">composicao.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./02-elementos-textuais/composicao.tex</attribute>
@@ -114,14 +114,14 @@
         <relationship name="bookmarks" type="0/0" destination="BOOKMARK"></relationship>
     </object>
     <object type="TEXFILE" id="z106">
-        <attribute name="visiblerect" type="string">{{0, 1169}, {729, 588.5}}</attribute>
-        <attribute name="cursor" type="string">{4482, 0}</attribute>
-        <attribute name="wasopen" type="bool">0</attribute>
-        <attribute name="lasteditdate" type="date">553057849.73512899875640869141</attribute>
+        <attribute name="visiblerect" type="string">{{0, 2079}, {729, 588.5}}</attribute>
+        <attribute name="cursor" type="string">{8586, 0}</attribute>
+        <attribute name="wasopen" type="bool">3</attribute>
+        <attribute name="lasteditdate" type="date">553061124.70312595367431640625</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">553057850.68388903141021728516</attribute>
+        <attribute name="fileloaddate" type="date">553061266.80128300189971923828</attribute>
         <attribute name="extension" type="string">tex</attribute>
-        <attribute name="sortindex" type="int32">17</attribute>
+        <attribute name="sortindex" type="int32">18</attribute>
         <attribute name="name" type="string">interacao-e-participacao.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./02-elementos-textuais/interacao-e-participacao.tex</attribute>
@@ -137,7 +137,7 @@
         <attribute name="istext" type="bool">0</attribute>
         <attribute name="fileloaddate" type="date">550106880.18903505802154541016</attribute>
         <attribute name="extension" type="string">png</attribute>
-        <attribute name="sortindex" type="int32">26</attribute>
+        <attribute name="sortindex" type="int32">27</attribute>
         <attribute name="name" type="string">jim_campbell.png</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./04-figuras/jim_campbell.png</attribute>
@@ -153,7 +153,7 @@
         <attribute name="istext" type="bool">0</attribute>
         <attribute name="fileloaddate" type="date">550106880.18418800830841064453</attribute>
         <attribute name="extension" type="string">png</attribute>
-        <attribute name="sortindex" type="int32">21</attribute>
+        <attribute name="sortindex" type="int32">22</attribute>
         <attribute name="name" type="string">takahito_matsuo.png</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./04-figuras/takahito_matsuo.png</attribute>
@@ -169,7 +169,7 @@
         <attribute name="istext" type="bool">0</attribute>
         <attribute name="fileloaddate" type="date">550106880.21624505519866943359</attribute>
         <attribute name="extension" type="string">png</attribute>
-        <attribute name="sortindex" type="int32">23</attribute>
+        <attribute name="sortindex" type="int32">24</attribute>
         <attribute name="name" type="string">kinect_sombras.png</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./04-figuras/kinect_sombras.png</attribute>
@@ -182,12 +182,12 @@
     <object type="TEXFILE" id="z110">
         <attribute name="visiblerect" type="string">{{0, 1142}, {729, 588.5}}</attribute>
         <attribute name="cursor" type="string">{4479, 0}</attribute>
-        <attribute name="wasopen" type="bool">1</attribute>
+        <attribute name="wasopen" type="bool">2</attribute>
         <attribute name="lasteditdate" type="date">553050169.13354599475860595703</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">553052160.99169194698333740234</attribute>
+        <attribute name="fileloaddate" type="date">553061266.80298995971679687500</attribute>
         <attribute name="extension" type="string">tex</attribute>
-        <attribute name="sortindex" type="int32">18</attribute>
+        <attribute name="sortindex" type="int32">19</attribute>
         <attribute name="name" type="string">luz-material.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./02-elementos-textuais/luz-material.tex</attribute>
@@ -203,9 +203,9 @@
         <attribute name="wasopen" type="bool">-1</attribute>
         <attribute name="lasteditdate" type="date">551322538.72228503227233886719</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">551585325.50811398029327392578</attribute>
+        <attribute name="fileloaddate" type="date">553052163.35077702999114990234</attribute>
         <attribute name="extension" type="string">tex</attribute>
-        <attribute name="sortindex" type="int32">15</attribute>
+        <attribute name="sortindex" type="int32">16</attribute>
         <attribute name="name" type="string">introducao.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./02-elementos-textuais/introducao.tex</attribute>
@@ -221,9 +221,9 @@
         <attribute name="wasopen" type="bool">-1</attribute>
         <attribute name="lasteditdate" type="date">550798841.61660599708557128906</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">551063960.12949395179748535156</attribute>
+        <attribute name="fileloaddate" type="date">553052163.36052298545837402344</attribute>
         <attribute name="extension" type="string">tex</attribute>
-        <attribute name="sortindex" type="int32">6</attribute>
+        <attribute name="sortindex" type="int32">7</attribute>
         <attribute name="name" type="string">capa.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./01-elementos-pre-textuais/capa.tex</attribute>
@@ -239,9 +239,9 @@
         <attribute name="wasopen" type="bool">-1</attribute>
         <attribute name="lasteditdate" type="date">551586604.44283103942871093750</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">551586606.81949901580810546875</attribute>
+        <attribute name="fileloaddate" type="date">553052163.36152505874633789062</attribute>
         <attribute name="extension" type="string">tex</attribute>
-        <attribute name="sortindex" type="int32">19</attribute>
+        <attribute name="sortindex" type="int32">20</attribute>
         <attribute name="name" type="string">consideracoes-finais.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./02-elementos-textuais/consideracoes-finais.tex</attribute>
@@ -257,7 +257,7 @@
         <attribute name="istext" type="bool">0</attribute>
         <attribute name="fileloaddate" type="date">550106880.22335600852966308594</attribute>
         <attribute name="extension" type="string">png</attribute>
-        <attribute name="sortindex" type="int32">24</attribute>
+        <attribute name="sortindex" type="int32">25</attribute>
         <attribute name="name" type="string">kinect_exemplo.png</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./04-figuras/kinect_exemplo.png</attribute>
@@ -268,20 +268,20 @@
         <relationship name="bookmarks" type="0/0" destination="BOOKMARK"></relationship>
     </object>
     <object type="FOLDER" id="z115">
-        <attribute name="sortindex" type="int32">0</attribute>
+        <attribute name="sortindex" type="int32">1</attribute>
         <attribute name="name" type="string">01-elementos-pre-textuais</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <relationship name="parent" type="1/1" destination="PROJECTITEM"></relationship>
         <relationship name="project" type="1/1" destination="PROJECT" idrefs="z104"></relationship>
-        <relationship name="children" type="0/0" destination="PROJECTITEM" idrefs="z122 z130 z119 z133 z117 z112 z123 z134 z132 z129"></relationship>
+        <relationship name="children" type="0/0" destination="PROJECTITEM" idrefs="z129 z119 z122 z134 z133 z123 z112 z132 z117 z130"></relationship>
     </object>
     <object type="TEXFILE" id="z116">
         <attribute name="wasopen" type="bool">-1</attribute>
         <attribute name="lasteditdate" type="date">550106880.23631799221038818359</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">550970330.38374698162078857422</attribute>
+        <attribute name="fileloaddate" type="date">553052163.35455596446990966797</attribute>
         <attribute name="extension" type="string">tex</attribute>
-        <attribute name="sortindex" type="int32">28</attribute>
+        <attribute name="sortindex" type="int32">29</attribute>
         <attribute name="name" type="string">referencias.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./03-elementos-pos-textuais/referencias.tex</attribute>
@@ -297,9 +297,9 @@
         <attribute name="wasopen" type="bool">-1</attribute>
         <attribute name="lasteditdate" type="date">550108118.39823997020721435547</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">550970328.51609396934509277344</attribute>
+        <attribute name="fileloaddate" type="date">553052163.36247694492340087891</attribute>
         <attribute name="extension" type="string">tex</attribute>
-        <attribute name="sortindex" type="int32">8</attribute>
+        <attribute name="sortindex" type="int32">9</attribute>
         <attribute name="name" type="string">folhaRosto.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./01-elementos-pre-textuais/folhaRosto.tex</attribute>
@@ -315,7 +315,7 @@
         <attribute name="istext" type="bool">0</attribute>
         <attribute name="fileloaddate" type="date">550106880.20708298683166503906</attribute>
         <attribute name="extension" type="string">png</attribute>
-        <attribute name="sortindex" type="int32">22</attribute>
+        <attribute name="sortindex" type="int32">23</attribute>
         <attribute name="name" type="string">kinect_componentes.png</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./04-figuras/kinect_componentes.png</attribute>
@@ -331,9 +331,9 @@
         <attribute name="wasopen" type="bool">-1</attribute>
         <attribute name="lasteditdate" type="date">551064952.07101297378540039062</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">551064117.93978798389434814453</attribute>
+        <attribute name="fileloaddate" type="date">553052163.36335396766662597656</attribute>
         <attribute name="extension" type="string">tex</attribute>
-        <attribute name="sortindex" type="int32">7</attribute>
+        <attribute name="sortindex" type="int32">8</attribute>
         <attribute name="name" type="string">preambulo.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./01-elementos-pre-textuais/preambulo.tex</attribute>
@@ -344,14 +344,14 @@
         <relationship name="bookmarks" type="0/0" destination="BOOKMARK"></relationship>
     </object>
     <object type="TEXFILE" id="z120">
-        <attribute name="visiblerect" type="string">{{0, 366.5}, {729, 380.5}}</attribute>
-        <attribute name="cursor" type="string">{1968, 0}</attribute>
-        <attribute name="wasopen" type="bool">-1</attribute>
-        <attribute name="lasteditdate" type="date">552009656.21836102008819580078</attribute>
+        <attribute name="visiblerect" type="string">{{0, 360}, {729, 588.5}}</attribute>
+        <attribute name="cursor" type="string">{2633, 0}</attribute>
+        <attribute name="wasopen" type="bool">4</attribute>
+        <attribute name="lasteditdate" type="date">553062366.77019596099853515625</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">552009657.34731197357177734375</attribute>
+        <attribute name="fileloaddate" type="date">553062534.19637703895568847656</attribute>
         <attribute name="extension" type="string">tex</attribute>
-        <attribute name="sortindex" type="int32">14</attribute>
+        <attribute name="sortindex" type="int32">15</attribute>
         <attribute name="name" type="string">arte-computacional.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./02-elementos-textuais/arte-computacional.tex</attribute>
@@ -362,12 +362,12 @@
         <relationship name="bookmarks" type="0/0" destination="BOOKMARK"></relationship>
     </object>
     <object type="FOLDER" id="z121">
-        <attribute name="sortindex" type="int32">13</attribute>
+        <attribute name="sortindex" type="int32">14</attribute>
         <attribute name="name" type="string">02-elementos-textuais</attribute>
-        <attribute name="isexpanded" type="bool">0</attribute>
+        <attribute name="isexpanded" type="bool">1</attribute>
         <relationship name="parent" type="1/1" destination="PROJECTITEM"></relationship>
         <relationship name="project" type="1/1" destination="PROJECT" idrefs="z104"></relationship>
-        <relationship name="children" type="0/0" destination="PROJECTITEM" idrefs="z120 z111 z110 z113 z106 z105"></relationship>
+        <relationship name="children" type="0/0" destination="PROJECTITEM" idrefs="z113 z120 z105 z111 z106 z110"></relationship>
     </object>
     <object type="TEXFILE" id="z122">
         <attribute name="visiblerect" type="string">{{0, 0}, {802.5, 608}}</attribute>
@@ -375,9 +375,9 @@
         <attribute name="wasopen" type="bool">-1</attribute>
         <attribute name="lasteditdate" type="date">550811120.08716797828674316406</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">550970328.51135599613189697266</attribute>
+        <attribute name="fileloaddate" type="date">553052163.36596405506134033203</attribute>
         <attribute name="extension" type="string">tex</attribute>
-        <attribute name="sortindex" type="int32">10</attribute>
+        <attribute name="sortindex" type="int32">11</attribute>
         <attribute name="name" type="string">epigrafe.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./01-elementos-pre-textuais/epigrafe.tex</attribute>
@@ -393,9 +393,9 @@
         <attribute name="wasopen" type="bool">-1</attribute>
         <attribute name="lasteditdate" type="date">550116922.23514699935913085938</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">550970328.51745998859405517578</attribute>
+        <attribute name="fileloaddate" type="date">553052163.35220503807067871094</attribute>
         <attribute name="extension" type="string">tex</attribute>
-        <attribute name="sortindex" type="int32">9</attribute>
+        <attribute name="sortindex" type="int32">10</attribute>
         <attribute name="name" type="string">listaFiguras.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./01-elementos-pre-textuais/listaFiguras.tex</attribute>
@@ -406,22 +406,22 @@
         <relationship name="bookmarks" type="0/0" destination="BOOKMARK"></relationship>
     </object>
     <object type="FOLDER" id="z124">
-        <attribute name="sortindex" type="int32">20</attribute>
+        <attribute name="sortindex" type="int32">21</attribute>
         <attribute name="name" type="string">04-figuras</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <relationship name="parent" type="1/1" destination="PROJECTITEM"></relationship>
         <relationship name="project" type="1/1" destination="PROJECT" idrefs="z104"></relationship>
-        <relationship name="children" type="0/0" destination="PROJECTITEM" idrefs="z109 z118 z114 z108 z126 z107"></relationship>
+        <relationship name="children" type="0/0" destination="PROJECTITEM" idrefs="z108 z126 z107 z118 z109 z114"></relationship>
     </object>
     <object type="TEXFILE" id="z125">
         <attribute name="wasopen" type="bool">-1</attribute>
         <attribute name="visiblerect" type="string">{{0, 1030.5}, {729, 620}}</attribute>
         <attribute name="lasteditdate" type="date">551546415.36682701110839843750</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">551585325.28160297870635986328</attribute>
+        <attribute name="fileloaddate" type="date">553052160.73321700096130371094</attribute>
         <attribute name="extension" type="string">tex</attribute>
         <attribute name="cursor" type="string">{1063, 0}</attribute>
-        <attribute name="sortindex" type="int32">12</attribute>
+        <attribute name="sortindex" type="int32">13</attribute>
         <attribute name="name" type="string">main.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./main.tex</attribute>
@@ -437,7 +437,7 @@
         <attribute name="istext" type="bool">0</attribute>
         <attribute name="fileloaddate" type="date">550106880.20301997661590576172</attribute>
         <attribute name="extension" type="string">png</attribute>
-        <attribute name="sortindex" type="int32">25</attribute>
+        <attribute name="sortindex" type="int32">26</attribute>
         <attribute name="name" type="string">esquema.png</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./04-figuras/esquema.png</attribute>
@@ -448,7 +448,7 @@
         <relationship name="bookmarks" type="0/0" destination="BOOKMARK"></relationship>
     </object>
     <object type="FOLDER" id="z127">
-        <attribute name="sortindex" type="int32">27</attribute>
+        <attribute name="sortindex" type="int32">28</attribute>
         <attribute name="name" type="string">03-elementos-pos-textuais</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <relationship name="parent" type="1/1" destination="PROJECTITEM"></relationship>
@@ -464,10 +464,10 @@
         <attribute name="visiblerect" type="string">{{0, 0}, {803.5, 447}}</attribute>
         <attribute name="lasteditdate" type="date">551064781.77667903900146484375</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">551064783.77512896060943603516</attribute>
+        <attribute name="fileloaddate" type="date">553052163.35684895515441894531</attribute>
         <attribute name="extension" type="string">tex</attribute>
         <attribute name="cursor" type="string">{635, 0}</attribute>
-        <attribute name="sortindex" type="int32">5</attribute>
+        <attribute name="sortindex" type="int32">6</attribute>
         <attribute name="name" type="string">resumoPt.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./01-elementos-pre-textuais/resumoPt.tex</attribute>
@@ -482,10 +482,10 @@
         <attribute name="visiblerect" type="string">{{0, 0}, {802.5, 608}}</attribute>
         <attribute name="lasteditdate" type="date">550717019.60570394992828369141</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">550970328.51195204257965087891</attribute>
+        <attribute name="fileloaddate" type="date">553052163.35353398323059082031</attribute>
         <attribute name="extension" type="string">tex</attribute>
         <attribute name="cursor" type="string">{203, 0}</attribute>
-        <attribute name="sortindex" type="int32">4</attribute>
+        <attribute name="sortindex" type="int32">5</attribute>
         <attribute name="name" type="string">resumoEn.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./01-elementos-pre-textuais/resumoEn.tex</attribute>
@@ -500,10 +500,10 @@
         <attribute name="visiblerect" type="string">{{0, 5042}, {797.5, 447}}</attribute>
         <attribute name="lasteditdate" type="date">550809237.99020397663116455078</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">551063959.49315595626831054688</attribute>
+        <attribute name="fileloaddate" type="date">553052160.77310800552368164062</attribute>
         <attribute name="extension" type="string">cls</attribute>
         <attribute name="cursor" type="string">{10742, 0}</attribute>
-        <attribute name="sortindex" type="int32">11</attribute>
+        <attribute name="sortindex" type="int32">12</attribute>
         <attribute name="name" type="string">diretrizes.cls</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./diretrizes.cls</attribute>
@@ -518,10 +518,10 @@
         <attribute name="visiblerect" type="string">{{0, 560}, {803.5, 447}}</attribute>
         <attribute name="lasteditdate" type="date">550970453.50293099880218505859</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">551063960.12604999542236328125</attribute>
+        <attribute name="fileloaddate" type="date">553052163.35808801651000976562</attribute>
         <attribute name="extension" type="string">tex</attribute>
         <attribute name="cursor" type="string">{1362, 0}</attribute>
-        <attribute name="sortindex" type="int32">3</attribute>
+        <attribute name="sortindex" type="int32">4</attribute>
         <attribute name="name" type="string">folhaAprovacao.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./01-elementos-pre-textuais/folhaAprovacao.tex</attribute>
@@ -536,10 +536,10 @@
         <attribute name="visiblerect" type="string">{{0, 0}, {802.5, 608}}</attribute>
         <attribute name="lasteditdate" type="date">550809690.80908095836639404297</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">550970328.51460099220275878906</attribute>
+        <attribute name="fileloaddate" type="date">553052163.35912096500396728516</attribute>
         <attribute name="extension" type="string">tex</attribute>
         <attribute name="cursor" type="string">{67, 0}</attribute>
-        <attribute name="sortindex" type="int32">1</attribute>
+        <attribute name="sortindex" type="int32">2</attribute>
         <attribute name="name" type="string">dedicatoria.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./01-elementos-pre-textuais/dedicatoria.tex</attribute>
@@ -555,9 +555,9 @@
         <attribute name="wasopen" type="bool">-1</attribute>
         <attribute name="lasteditdate" type="date">550810530.24538397789001464844</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">550970328.50704801082611083984</attribute>
+        <attribute name="fileloaddate" type="date">553052163.35552299022674560547</attribute>
         <attribute name="extension" type="string">tex</attribute>
-        <attribute name="sortindex" type="int32">2</attribute>
+        <attribute name="sortindex" type="int32">3</attribute>
         <attribute name="name" type="string">agradecimentos.tex</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
         <attribute name="filepath" type="string">./01-elementos-pre-textuais/agradecimentos.tex</attribute>
@@ -568,13 +568,13 @@
         <relationship name="bookmarks" type="0/0" destination="BOOKMARK"></relationship>
     </object>
     <object type="FILE" id="z135">
-        <attribute name="wasopen" type="bool">2</attribute>
-        <attribute name="visiblerect" type="string">{{0, 3735}, {723, 557.5}}</attribute>
-        <attribute name="lasteditdate" type="date">553059055.52770602703094482422</attribute>
+        <attribute name="wasopen" type="bool">1</attribute>
+        <attribute name="visiblerect" type="string">{{0, 3952}, {723, 557.5}}</attribute>
+        <attribute name="lasteditdate" type="date">553060225.70490598678588867188</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">553059237.32079195976257324219</attribute>
+        <attribute name="fileloaddate" type="date">553061266.79452300071716308594</attribute>
         <attribute name="extension" type="string">bib</attribute>
-        <attribute name="cursor" type="string">{7093, 0}</attribute>
+        <attribute name="cursor" type="string">{7679, 0}</attribute>
         <attribute name="sortindex" type="int32">0</attribute>
         <attribute name="name" type="string">refbase.bib</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
