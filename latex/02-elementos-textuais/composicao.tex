@@ -1,5 +1,7 @@
 \chapter{COMPOSIÇÃO DA OBRA}
 
+Dentre os componentes da instalação interativa proposta neste trabalho, podemos destacar a interface, representada pelo sensor Microsoft Kinect, que parece invisível dado que o interator precisa apenas estar com o seu corpo presente no espaço para que a obra se materialize; o gerenciamento digital que é feito através de um computador e da utilização de \textit{Processing} para execução e manutenção do programa; e, por fim, o dispositivo de saída de dados, aqui reprensentado por uma composição entre a malha de LEDs e o Arduino, traduzindo informação em luz.
+
 Devido ao recurso de capturar objetos e movimentos no espaço, optou-se pelo uso do sensor Microsoft Kinect que, conectado a um computador, é responsável por captar a área onde os espectadores se encontram. Integrando-o a uma placa Arduino é possível controlar uma série de LEDs, dispostos em uma grade pendente ao teto. Cada LED possui cabos de fibra ótica \textit{side light} (com emissão de luz lateral) conectados à ele que se iluminam conforme os espectadores caminham sob a grade. Na figura \ref{fig:esquema} podemos ver um esquema de montagem da obra, sendo que, o sensor Kinect fica preso junto ao teto, a grade com os LEDs se encontra abaixo, a pouco mais de um metro de distância, deixando espaço suficiente para os espectadores transitarem.
 
 \begin{figure}[H]
@@ -43,7 +45,7 @@ Considerando as limitações do sensor Kinect, a que mais impactou este projeto 
 {\raggedright \fonte{\citeonline{lucero}}}\\
 
 
-O Microsoft Kinect foi utilizado como fonte de entrada (\textit{input}) de dados para mapear o ambiente tridimensional. Um programa escrito em \textit{Processing}\footnote{\textit{Processing} é uma plataforma e uma linguagem de programação para prototipação de \textit{software} dentro do contexto das artes visuais. Desde 2001, a \textit{Processing} promoveu a alfabetização em \textit{software} dentro das artes visuais e a alfabetização visual dentro da tecnologia. Há dezenas de milhares de estudantes, artistas, designers, pesquisadores e amadores que usam \textit{Processing} para aprender e criar protótipos (PROCESSING, 2018).}, captura as informações fornecidas pelo Kinect e gera uma imagem bidimensional que, mais tarde, é reproduzida na estrutura de LEDs. A figura \ref{fig:kinect_exemplo} mostra um exemplo de imagem criada a partir dos dados capturados pelo sensor. Cada ponto branco apresentado na figura representa um LED aceso na estrutura física, enquanto a área em preto demarca os intervalos entre os mesmos. Não há distinção, na imagem, entre estes intervalos e os LEDs apagados. 
+O Microsoft Kinect atua como interface da instalação interativa proposta neste trabalho, sendo utilizado como fonte de entrada (\textit{input}) de dados para mapear o ambiente tridimensional. A figura \ref{fig:kinect_exemplo} mostra um exemplo de imagem criada a partir dos dados capturados pelo sensor. Cada ponto branco apresentado na figura representa um LED aceso na estrutura física, enquanto a área em preto demarca os intervalos entre os mesmos. Não há distinção, na imagem, entre estes intervalos e os LEDs apagados. 
 
 \begin{figure}[H]
     \centering
@@ -54,6 +56,13 @@ O Microsoft Kinect foi utilizado como fonte de entrada (\textit{input}) de dados
 \end{figure}
 \vspace*{-0,9cm}
 {\raggedright \fonte{Captura de tela de imagem gerada pelo sensor Kinect}}\\
+
+
+\section{PROCESSING}
+
+De acordo com \citeonline[p. 115]{santos} Processing é a primeira ferramenta criada para artistas por artistas e o seu desenvolvimento foi iniciado no MIT Media Lab por dois estudantes de graduação: Casey Reas e Benjamin Fry. Segundo informações contidas no site oficial do projeto \citeonline{processing} é uma plataforma e uma linguagem de programação de código aberto (\textit{open source}) para prototipação de \textit{software} dentro do contexto das artes visuais. Disponível desde 2001, a Processing promoveu a alfabetização em \textit{software} dentro das artes visuais e a alfabetização visual dentro da tecnologia. Há dezenas de milhares de estudantes, artistas, designers, pesquisadores e amadores que usam Processing para aprender e criar protótipos.
+
+O gerencimento digital da obra é realizado através de um computador que executa um programa escrito em Processing, interpretando as informações fornecidas pelo Kinect e gerando uma imagem bidimensional que, mais tarde, é transferiada para o Arduino e reproduzida na estrutura de LEDs. 
 
 
 \section{ARDUINO}
@@ -67,9 +76,8 @@ Arduino é uma plataforma de prototipagem eletrônica de \textit{hardware} livre
 Neste trabalho o Arduino foi utilizado para controlar os circuitos da malha de LEDs (saída ou \textit{output}) recebendo as informações mapeadas pelo sensor Kinect (entrada ou \textit{input}). Cada LED precisa ser controlado individualmente, por isso, à princípio, optou-se pela utilização do Arduino Mega que possui 54 entradas/saídas digitais, sendo a placa disponível com o maior número de entradas/saídas. Ainda se encontra em definição a maneira como o trabalho será escalado para atingir as dimensões propostas na próxima sessão deste capítulo. Considera-se a possibilidade de utilizar mais de uma placa Arduino, circuitos multiplexadores - que permitem que em uma única porta sejam conectados mais de um LED -, ou ainda, a construção de uma placa sob medida.
 
 \section{MALHA DE LEDS}
-\label{sec:malha}
 
-Será construída uma grade de LEDs formada por quatro módulos de 120 x 80 cm, constituindo uma área total de 2,4 x 1,6 metros onde o espectador pode interagir com a obra. As grades possuem intercesções a cada 20 centímetros, em ambos os sentidos, e cada intersecção possui um LED preso à ela. Na figura \ref{fig:malha} podemos ver um esquema dessa grade, sendo que, são apresentados exemplos de apenas 3 LEDs para não poluir o esquema.
+A malha delimita o espaço da instalação. Será construída uma grade de LEDs formada por quatro módulos de 120 x 80 cm, constituindo uma área total de 2,4 x 1,6 metros onde o espectador pode interagir com a obra. As grades possuem intercesções a cada 20 centímetros, em ambos os sentidos, e cada intersecção possui um LED preso à ela. Na figura \ref{fig:malha} podemos ver um esquema dessa grade, sendo que, são apresentados exemplos de apenas 3 LEDs para não poluir o esquema.
 
 \begin{figure}[H]
     \centering
@@ -81,11 +89,11 @@ Será construída uma grade de LEDs formada por quatro módulos de 120 x 80 cm, 
 \vspace*{-0,9cm}
 {\raggedright \fonte{Elaborada pela autora}}\\
 
-Cada LED vai contar com fios de fibra ótica, com emissão de luz lateral, de várias espessuras presos em sua extremidade (figura \ref{fig:led_fibra_otica}). Quando o LED acender, a partir da interação com o usuário, a luz será transmitida pela fibra ótica, gerando vários pontos iluminados.
+Cada LED representa um ponto da imagem processada pelo sistema computacional e conta com fios de fibra ótica, com emissão de luz lateral, de várias espessuras presos em sua extremidade. Quando o LED acender, a partir da interação com o usuário, a luz será transmitida pela fibra ótica, gerando se transformando em vários pontos iluminados. Na figura \ref{fig:led_fibra_otica} podemos ver o exemplo de um desses LEDs, sendo que, no primeiro quadro o LED é exbido apagado, no segundo aceso em ambiente com alta luminosidade e, por fim, no terceiro quadro, aceso em ambiente com baixa luminosidade. 
 
 \begin{figure}[H]
     \centering
-    \caption{LED com fibra ótica}
+    \caption{LED com fibra ótica em diferentes condições de luminosidade}
 	\vspace*{0,2cm}
     \includegraphics[width=0.8\textwidth]{./04-figuras/led_fibra_otica}
     \label{fig:led_fibra_otica}
