@@ -75,7 +75,7 @@
         <relationship name="project" type="1/1" destination="PROJECT" idrefs="z104"></relationship>
     </object>
     <object type="UISETTINGS" id="z103">
-        <attribute name="pdfviewscrollrect" type="string">{{0, 632}, {604, 836}}</attribute>
+        <attribute name="pdfviewscrollrect" type="string">{{0, 17856}, {604, 836}}</attribute>
         <attribute name="showpdfthumbnails" type="bool">0</attribute>
         <attribute name="selectedcontrolstab" type="int16">0</attribute>
         <attribute name="maxoutlinedepth" type="int16">7</attribute>
@@ -326,12 +326,12 @@
         <relationship name="bookmarks" type="0/0" destination="BOOKMARK"></relationship>
     </object>
     <object type="TEXFILE" id="z120">
-        <attribute name="visiblerect" type="string">{{0, 1567}, {729, 617}}</attribute>
-        <attribute name="cursor" type="string">{5999, 0}</attribute>
+        <attribute name="visiblerect" type="string">{{0, 1047}, {729, 617}}</attribute>
+        <attribute name="cursor" type="string">{5028, 0}</attribute>
         <attribute name="wasopen" type="bool">2</attribute>
-        <attribute name="lasteditdate" type="date">553483327.13587903976440429688</attribute>
+        <attribute name="lasteditdate" type="date">553485823.43646502494812011719</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">553483327.89531803131103515625</attribute>
+        <attribute name="fileloaddate" type="date">553485824.25441896915435791016</attribute>
         <attribute name="extension" type="string">tex</attribute>
         <attribute name="sortindex" type="int32">15</attribute>
         <attribute name="name" type="string">arte-computacional.tex</attribute>
