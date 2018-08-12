@@ -5,7 +5,7 @@
     <databaseInfo>
         <version>134481920</version>
         <UUID>D6DC768C-C97B-4E3E-8AF2-771B95688896</UUID>
-        <nextObjectID>136</nextObjectID>
+        <nextObjectID>138</nextObjectID>
         <metadata>
             <plist version="1.0">
                 <dict>
@@ -75,7 +75,7 @@
         <relationship name="project" type="1/1" destination="PROJECT" idrefs="z104"></relationship>
     </object>
     <object type="UISETTINGS" id="z103">
-        <attribute name="pdfviewscrollrect" type="string">{{0, 10787.166666717079}, {604, 584.99300698870502}}</attribute>
+        <attribute name="pdfviewscrollrect" type="string">{{0, 17230.742424283293}, {604, 584.99300697729996}}</attribute>
         <attribute name="showpdfthumbnails" type="bool">0</attribute>
         <attribute name="selectedcontrolstab" type="int16">0</attribute>
         <attribute name="maxoutlinedepth" type="int16">7</attribute>
@@ -93,7 +93,7 @@
         <relationship name="selected" type="1/1" destination="FILE" idrefs="z110"></relationship>
         <relationship name="settings" type="1/1" destination="SETTINGS" idrefs="z102"></relationship>
         <relationship name="uisettings" type="1/1" destination="UISETTINGS" idrefs="z103"></relationship>
-        <relationship name="items" type="0/0" destination="PROJECTITEM" idrefs="z118 z121 z112 z127 z119 z111 z105 z123 z117 z130 z124 z126 z131 z115 z125 z133 z114 z107 z109 z110 z113 z108 z116 z120 z134 z122 z135 z129 z132"></relationship>
+        <relationship name="items" type="0/0" destination="PROJECTITEM" idrefs="z119 z107 z116 z126 z124 z115 z110 z123 z113 z117 z120 z108 z121 z114 z118 z109 z131 z134 z129 z130 z122 z105 z135 z132 z133 z127 z111 z125 z112"></relationship>
     </object>
     <object type="TEXFILE" id="z105">
         <attribute name="visiblerect" type="string">{{0, 2084}, {729, 617}}</attribute>
@@ -162,12 +162,12 @@
         <relationship name="bookmarks" type="0/0" destination="BOOKMARK"></relationship>
     </object>
     <object type="TEXFILE" id="z110">
-        <attribute name="visiblerect" type="string">{{0, 3729.5}, {755, 574}}</attribute>
-        <attribute name="cursor" type="string">{12531, 0}</attribute>
-        <attribute name="wasopen" type="bool">1</attribute>
-        <attribute name="lasteditdate" type="date">555688225.41787004470825195312</attribute>
+        <attribute name="visiblerect" type="string">{{0, 9}, {761, 606}}</attribute>
+        <attribute name="cursor" type="string">{1452, 0}</attribute>
+        <attribute name="wasopen" type="bool">0</attribute>
+        <attribute name="lasteditdate" type="date">555798802.33438801765441894531</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">555688225.93982899188995361328</attribute>
+        <attribute name="fileloaddate" type="date">555798802.99258005619049072266</attribute>
         <attribute name="extension" type="string">tex</attribute>
         <attribute name="sortindex" type="int32">18</attribute>
         <attribute name="name" type="string">luz-material.tex</attribute>
@@ -177,7 +177,7 @@
         <relationship name="project" type="1/1" destination="PROJECT" idrefs="z104"></relationship>
         <relationship name="mainfileofproject" type="1/1" destination="PROJECT"></relationship>
         <relationship name="children" type="0/0" destination="PROJECTITEM"></relationship>
-        <relationship name="bookmarks" type="0/0" destination="BOOKMARK"></relationship>
+        <relationship name="bookmarks" type="0/0" destination="BOOKMARK" idrefs="z137"></relationship>
     </object>
     <object type="TEXFILE" id="z111">
         <attribute name="visiblerect" type="string">{{0, 124.5}, {800, 717}}</attribute>
@@ -546,13 +546,13 @@
         <relationship name="bookmarks" type="0/0" destination="BOOKMARK"></relationship>
     </object>
     <object type="FILE" id="z135">
-        <attribute name="wasopen" type="bool">0</attribute>
-        <attribute name="visiblerect" type="string">{{0, 4104.5}, {755, 733}}</attribute>
-        <attribute name="lasteditdate" type="date">555531404.43666994571685791016</attribute>
+        <attribute name="wasopen" type="bool">1</attribute>
+        <attribute name="visiblerect" type="string">{{0, 6456}, {787, 631}}</attribute>
+        <attribute name="lasteditdate" type="date">555796667.18715000152587890625</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">555531405.29665601253509521484</attribute>
+        <attribute name="fileloaddate" type="date">555796666.87927699089050292969</attribute>
         <attribute name="extension" type="string">bib</attribute>
-        <attribute name="cursor" type="string">{7293, 0}</attribute>
+        <attribute name="cursor" type="string">{11687, 50}</attribute>
         <attribute name="sortindex" type="int32">0</attribute>
         <attribute name="name" type="string">refbase.bib</attribute>
         <attribute name="isexpanded" type="bool">0</attribute>
@@ -567,6 +567,18 @@
         <attribute name="text" type="string">\\section{O CORPO DO OBSERVADOR E SUA INTERFERÊNCIA NA OBRA DE ARTE}
 </attribute>
         <attribute name="linenumber" type="int64">17</attribute>
+        <relationship name="parentfile" type="1/1" destination="FILE"></relationship>
+    </object>
+    <object type="BOOKMARK" id="z137">
+        <attribute name="text" type="string">\\vspace*{-0,9cm}
+</attribute>
+        <attribute name="linenumber" type="int64">35</attribute>
+        <relationship name="parentfile" type="1/1" destination="FILE" idrefs="z110"></relationship>
+    </object>
+    <object type="BOOKMARK" id="z138">
+        <attribute name="text" type="string">De acordo com \\citeonline[p. 63]{sogabe2011} quando pensamos em instalações interativas, temos a lembrança de uma sala fechada e escura. Ele diz que essa condição está relacionada ao tipo de projetores de imagens existentes em uma época, com baixa luminosidade e que necessitavam de escuridão para apresentarem imagens nítidas. O autor afirma que, atualmente, essa condição já não é obrigatória, pois temos projetores de alta luminância, que podem funcionar em ambientes totalmente iluminados. Conclui então que, pela melhora dos equipamentos, o ambiente escuro passa a ser uma opção e não uma condição necessária. Ainda que isso possa ser verdade no que tange a imagem projetada, quando se trata da cor como fonte luminosa não se pode afirmar o mesmo. \\citeonline[p. 125]{henno} em sua pesquisa afirma que quando há pouca ou nenhuma luminosidade, a intensidade das cores é maior e mais perceptível devido ao contraste com a escuridão. Afirma também que o contraste da cor como informação luminosa em face da escuridão estabelece comunicação com o observador seduzindo-o pelos sentidos que tal cor suscita.
+</attribute>
+        <attribute name="linenumber" type="int64">35</attribute>
         <relationship name="parentfile" type="1/1" destination="FILE"></relationship>
     </object>
 </database>
