@@ -6,9 +6,18 @@ import cc.arduino.*;
 Arduino arduino;
 Kinect kinect;
 
-PImage img;
+PImage threshold;
 float minThresh = 0;
 float maxThresh = 1.8;
+
+int cols = 7;
+int rows = 5;
+int side = 92;
+int top, left;
+
+int radius = 10;
+
+LED[][] matrix = new LED[cols][rows];
 
 void setup() {
   size(1280, 480);
@@ -17,80 +26,86 @@ void setup() {
   kinect.initDepth();
   kinect.initVideo();
   
-  arduino = new Arduino(this, Arduino.list()[3], 57600);
-  arduino.pinMode(8, Arduino.OUTPUT);
-  arduino.pinMode(9, Arduino.OUTPUT);
-  arduino.pinMode(10, Arduino.OUTPUT);
-  arduino.pinMode(11, Arduino.OUTPUT);
-  arduino.pinMode(12, Arduino.OUTPUT);
+  top = ((kinect.height - (side * rows)) / 2) + (side / 2);
+  left = ((kinect.width - (side * cols))/ 2) + (side / 2);
   
-  img = createImage(kinect.width, kinect.height, RGB);
+  threshold = createImage(kinect.width, kinect.height, RGB);
   
+  for (int i = 0; i < cols; i++) {
+    for (int j = 0; j < rows; j++) {
+      int x = left + side * i;
+      int y = top + side * j;
+      matrix[i][j] = new LED(x, y, radius);
+    }
+  }  
 }
 
 void draw() {
   background(0);
-  img.loadPixels();
+  threshold.loadPixels();
   
   int[] depth = kinect.getRawDepth();
-  int skip = 128;
 
-  boolean turnOn = false;
 
-  for (int x = 0; x < kinect.width; x += skip) {
-    for (int y = 0; y < kinect.height; y += skip) {
+ 
+  for (int x = 0; x < kinect.width; x++) {
+    for (int y = 0; y < kinect.height; y++) {
       int offset = x + y * kinect.width;
       int d = depth[offset];
       float distanceInmeters = rawDepthToMeters(d);
       
       if (distanceInmeters > minThresh && distanceInmeters < maxThresh) {  
-        img.pixels[offset] = color(255, 255, 255);
-        ellipse(offset, offset, 30, 30);
-               
-        if (y == 128) {
-           println(">>>>" + x + " " + y);
-          if (x >= 0 && x < 128) {
-             arduino.digitalWrite(8, Arduino.HIGH);
-          } else if (x >= 128 && x < 256) {
-             arduino.digitalWrite(9, Arduino.HIGH);        
-          }  else if (x >= 256 && x < 384) {
-             arduino.digitalWrite(10, Arduino.HIGH);        
-          } else if (x >= 384 && x < 512) {
-             arduino.digitalWrite(11, Arduino.HIGH);        
-          } else {      
-             arduino.digitalWrite(12, Arduino.HIGH);        
-          }
-        }
-        
+        threshold.pixels[offset] = color(255, 255, 255);        
       } else {
-        img.pixels[offset] = color(0, 0, 0);
-        
-        if (y == 128) {
-          if (x >= 0 && x < 128) {
-             arduino.digitalWrite(8, Arduino.LOW);
-          } else if (x >= 128 && x < 256) {
-             arduino.digitalWrite(9, Arduino.LOW);        
-          }  else if (x >= 256 && x < 384) {
-             arduino.digitalWrite(10, Arduino.LOW);        
-          } else if (x >= 384 && x < 480) {
-             arduino.digitalWrite(11, Arduino.LOW);        
-          } else {
-             arduino.digitalWrite(12, Arduino.LOW);        
-          }
-        } 
-        
-      } 
+        threshold.pixels[offset] = color(0, 0, 0); 
+      }
      }
   }
-  
-  arduino.digitalWrite(10, turnOn ? Arduino.HIGH : Arduino.LOW);
-  
-  img.updatePixels();
+   
+  threshold.updatePixels();
   image(kinect.getVideoImage(), 0, 0);
-  image(img, 640, 0);
+  image(threshold, 640, 0);
   
+  for (int i = 0; i < cols; i++) {
+    for (int j = 0; j < rows; j++) {
+      
+      int x = (int) matrix[i][j].position.x - radius;
+      int y = (int) matrix[i][j].position.y - radius;
+      
+      PImage newImg = threshold.get(x, y, radius*2, radius*2);
+      //image(newImg, x, y);
+   
+      if (isAverageBlack(newImg)) {
+        matrix[i][j].turnOff();
+      } else {
+        matrix[i][j].turnOn();
+      }
+    }
+  } 
+}
+
+class LED {
+  PVector position;
+  int radius;
+
+  LED(int x, int y, int r) {
+    position = new PVector(x, y);
+    radius = r;
+  }
   
-  turnOn = false;
+  void display(boolean turnOn) {
+    stroke(255);
+    fill(turnOn ? 255 : 0);
+    ellipse(position.x, position.y, radius*2, radius*2);
+  }
+  
+  void turnOn() {
+    display(true);
+  }
+  
+  void turnOff() {
+    display(false);
+  }
 }
 
 // These functions come from: http://graphics.stanford.edu/~mdfisher/Kinect.html
@@ -99,4 +114,22 @@ float rawDepthToMeters(int depthValue) {
     return (float)(1.0 / ((double)(depthValue) * -0.0030711016 + 3.3309495161));
   }
   return 0.0f;
+}
+
+boolean isAverageBlack(final PImage img) {
+  img.loadPixels();
+  color b = 0, w = 0;
+ 
+  for (final color c : img.pixels) {
+    if (c == color(255)) {
+      w++;
+    } else {
+      b++;
+    }
+  }
+ 
+  b /= img.pixels.length;
+  w /= img.pixels.length;
+ 
+  return b > w;
 }

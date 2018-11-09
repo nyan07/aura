@@ -1,0 +1,88 @@
+import org.openkinect.freenect.*;
+import org.openkinect.processing.*;
+import processing.serial.*;
+import cc.arduino.*;
+
+Arduino arduino;
+Kinect kinect;
+
+PImage img;
+float minThresh = 0;
+float maxThresh = 1.8;
+
+int cols = 7;
+int rows = 5;
+Point[][] matrix = new Point[cols][rows];
+
+void setup() {
+  size(1280, 480);
+  
+  kinect = new Kinect(this);
+  kinect.initDepth();
+  kinect.initVideo();
+  
+  img = createImage(kinect.width, kinect.height, RGB);
+  
+  
+  for (int i = 0; i < cols; i++) {
+  for (int j = 0; j < rows; j++) {
+    int x = 92 * i;
+    int y = 92 * j;
+    matrix[i][j] = new Point(x, y);
+  }
+}
+  
+}
+
+void draw() {
+  background(0);
+  img.loadPixels();
+  
+  int[] depth = kinect.getRawDepth();
+  int skip = 128;
+
+
+  for (int x = 0; x < kinect.width; x += skip) {
+    for (int y = 0; y < kinect.height; y += skip) {
+      int offset = x + y * kinect.width;
+      int d = depth[offset];
+      float distanceInmeters = rawDepthToMeters(d);
+      
+      if (distanceInmeters > minThresh && distanceInmeters < maxThresh) {  
+        img.pixels[offset] = color(255, 255, 255);
+        ellipse(offset, offset, 30, 30);
+      } 
+     }
+  }
+   
+  img.updatePixels();
+  image(kinect.getVideoImage(), 0, 0);
+  image(img, 640, 0);
+  
+  
+  turnOn = false;
+}
+
+// These functions come from: http://graphics.stanford.edu/~mdfisher/Kinect.html
+float rawDepthToMeters(int depthValue) {
+  if (depthValue < 2047) {
+    return (float)(1.0 / ((double)(depthValue) * -0.0030711016 + 3.3309495161));
+  }
+  return 0.0f;
+}
+
+class Point {
+  int x, y;
+  int w, h = 20;
+
+  Point(int mX, int mY) {
+    x = mX;
+    y = mY;
+  }
+  
+  void draw() {
+    stroke(255);
+    fill(0xFFFFFF);
+    rect(x,y,w,h);
+  }
+}
