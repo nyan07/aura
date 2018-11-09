@@ -1,6 +1,6 @@
 \chapter{COMPOSIÇÃO DA OBRA}
 
-Dentre os componentes da instalação interativa proposta neste trabalho, podemos destacar a interface, representada pelo sensor Microsoft Kinect, que parece invisível dado que o interator precisa apenas estar com o seu corpo presente no espaço para que a obra se materialize; o gerenciamento digital que é feito através de um computador e da utilização de \textit{Processing} para execução e manutenção do programa; e, por fim, o dispositivo de saída de dados, aqui reprensentado por uma composição entre a malha de LEDs e o Arduino, traduzindo informação em luz.
+Dentre os componentes da instalação interativa aqui proposta, podemos destacar a interface, representada pelo sensor Microsoft Kinect, que parece invisível dado que o interator precisa apenas estar com o seu corpo presente no espaço para que a obra se materialize; o gerenciamento digital que é feito através de um computador e da utilização de \textit{Processing} para execução e manutenção do programa; e, por fim, o dispositivo de saída de dados, aqui reprensentado por uma composição entre a malha de LEDs e o Arduino, traduzindo informação em luz.
 
 Devido ao recurso de capturar objetos e movimentos no espaço, optou-se pelo uso do sensor Microsoft Kinect que, conectado a um computador, é responsável por captar a área onde os espectadores se encontram. Integrando-o a uma placa Arduino é possível controlar uma série de LEDs, dispostos em uma grade pendente ao teto. Cada LED possui cabos de fibra ótica \textit{side light} (com emissão de luz lateral) conectados à ele que se iluminam conforme os espectadores caminham sob a grade. Na figura \ref{fig:esquema} podemos ver um esquema de montagem da obra, sendo que, o sensor Kinect fica preso junto ao teto, a grade com os LEDs se encontra abaixo, a pouco mais de um metro de distância, deixando espaço suficiente para os espectadores transitarem.
 
@@ -73,13 +73,23 @@ Para compreender o que é e para que serve o Arduino, podemos analisar a descri�
 Arduino é uma plataforma de prototipagem eletrônica de \textit{hardware} livre e de placa única. O objetivo do projeto é criar ferramentas que são acessíveis, com baixo custo, flexíveis e fáceis de usar. Placas arduíno são capazes de ler uma entrada como a luz em um sensor, um dedo pressionando um botão ou uma mensagem do Twitter e transformá-la em uma saída como ativar um motor, ligar um LED ou publicar alguma coisa na internet, por exemplo. É possível dizer à placa o que fazer enviando uma série de instruções ao microcontrolador. Para isso é necessário utilizar a linguagem de programação do Arduino (baseada em Wiring) e o seu software (IDE - \textit{Integrated Development Environment} ou Ambiente de Desenvolvimento Integrado), baseada em Processing \cite{arduino}. 
 \end{citacao}
 
-Neste trabalho o Arduino foi utilizado para controlar os circuitos da malha de LEDs (saída ou \textit{output}) recebendo as informações mapeadas pelo sensor Kinect (entrada ou \textit{input}). Cada LED precisa ser controlado individualmente, por isso, à princípio, optou-se pela utilização do Arduino Mega que possui 54 entradas/saídas digitais, sendo a placa disponível com o maior número de entradas/saídas. Ainda se encontra em definição a maneira como o trabalho será escalado para atingir as dimensões propostas na próxima sessão deste capítulo. Considera-se a possibilidade de utilizar mais de uma placa Arduino, circuitos multiplexadores - que permitem que em uma única porta sejam conectados mais de um LED -, ou ainda, a construção de uma placa sob medida.
+Neste trabalho o Arduino foi utilizado para controlar os circuitos da malha de LEDs (saída ou \textit{output}) recebendo as informações mapeadas pelo sensor Kinect (entrada ou \textit{input}). Cada LED é controlado individualmente, para isso, optou-se pela utilização do Arduino Mega 2560 (figura \ref{fig:arduino}) que possui 54 entradas/saídas digitais, suficientes para atender a proposta apresentada.
+
+\begin{figure}[H]
+    \centering
+    \caption{Arduino Mega 2560}
+	\vspace*{0,2cm}
+    \includegraphics[width=0.8\textwidth]{./04-figuras/arduino}
+    \label{fig:arduino}
+\end{figure}
+\vspace*{-0,9cm}
+{\raggedright \fonte{\citeonline{arduino}}}\\
 
 
 \section{MALHA DE LEDS}
 \label{sec:malha}
 
-A malha é composta primariamente por uma grade de 120 x 80 centímetros que delimita o espaço da instalação onde o espectador pode interagir com a obra. Esta grade possui intersecções a cada 20 centímetros, em ambos os sentidos, e cada uma possui um LED preso à ela. Na figura \ref{fig:malha} podemos ver um esquema da mesma.
+A malha é composta primariamente por uma grade de 120 x 80 centímetros que delimita o espaço da instalação onde o espectador pode interagir com a obra. Como podemos ver na figura \ref{fig:malha}, esta grade possui intersecções a cada 20 centímetros, formando uma matriz de 5 linhas por 7 colunas. Cada intersecção possui um LED preso à ela, somando um total de 35 LEDs dispostos na obra.
 
 \begin{figure}[H]
     \centering
@@ -103,10 +113,11 @@ Cada LED representa um quadrante da imagem processada pelo sistema computacional
 \vspace*{-0,9cm}
 {\raggedright \fonte{Elaborada pela autora}}\\
 
+A partir da imagem acima é possível constatar a diferença de exposição em ambientes com distintos graus de luminosidade. Ainda que a luz seja visível ao se observar o LED em um ambiente com alta luminosidade e, isso viabilize a exposição do trabalho mesmo em condições como esta, se nota uma discrepância considerável quando voltamos nossos olhos para o terceiro quadrante, onde o LED é exibido em ambiente com baixa luminosidade. A peça ganha destaque e a cor azul do LED se propaga com maior intensidade, o que reforça a escolha do cubo preto como sendo o meio ideal para exibição desse trabalho.
 
 \section{PROTÓTIPO}
 
-Para validar o projeto foi construído um protótipo com o Microsoft Kinect, um computador, um Arduino Uno e 5 LEDs conectados à ele conforme pode ser visto na figura \ref{fig:prototipo}. Através da utilização de duas bibliotecas, \textit{Open Kinect for Processing} e Arduino (Firmata), foi possível construir um \textit{script} que controla os dispositivos de entrada e saída de forma integrada, causando assim o acender e apagar dos LEDs de acordo com a presença detectada pelo sensor.
+Para validar o projeto foi construído um protótipo com o Microsoft Kinect, um computador, um Arduino Uno e 5 LEDs conectados à ele conforme pode ser visto na figura \ref{fig:prototipo}. Através da utilização de duas bibliotecas, \textit{Open Kinect for Processing} e Arduino (Firmata), construiu-se um \textit{script} que controla os dispositivos de entrada e saída de forma integrada, causando, assim, o acender e apagar dos LEDs de acordo com as informações capturadas pelo sensor. Desejava-se provar a possibilidade de, primeiro, controlar os dispositivos de entrada e saída de dados de maneira simultânea e, depois, a capacidade da luz emitida pelo LED se propagar através da fibra ótica.
 
 \begin{figure}[H]
     \centering
@@ -118,7 +129,7 @@ Para validar o projeto foi construído um protótipo com o Microsoft Kinect, um 
 \vspace*{-0,9cm}
 {\raggedright \fonte{Elaborada pela autora}}\\
 
-Na figura \ref{fig:prototipo-escuro} podemos ver uma amostra do protótipo sendo executado em um ambiente com baixa luminosidade, o que reforça a escolha do cubo preto como sendo o meio ideal para exibição desse trabalho.
+Na figura \ref{fig:prototipo-escuro} podemos ver uma amostra do protótipo sendo executado em um ambiente com baixa luminosidade.
  
 \begin{figure}[H]
     \centering
