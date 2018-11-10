@@ -7,8 +7,8 @@ Arduino arduino;
 Kinect kinect;
 
 PImage threshold;
-float minThresh = 0;
-float maxThresh = 1.8;
+float minThresh = 0.5;
+float maxThresh = 0.8;
 
 int cols = 7;
 int rows = 5;
@@ -26,16 +26,25 @@ void setup() {
   kinect.initDepth();
   kinect.initVideo();
   
+  arduino = new Arduino(this, Arduino.list()[3], 57600);
+  for (int i=0; i < 14; i++){
+    arduino.pinMode(i, Arduino.OUTPUT);
+  }
+  
   top = ((kinect.height - (side * rows)) / 2) + (side / 2);
-  left = ((kinect.width - (side * cols))/ 2) + (side / 2);
+  left =  ((kinect.width - (side * cols)) / 2) + (side / 2);
   
   threshold = createImage(kinect.width, kinect.height, RGB);
+  
+  int port = 0;
   
   for (int i = 0; i < cols; i++) {
     for (int j = 0; j < rows; j++) {
       int x = left + side * i;
       int y = top + side * j;
-      matrix[i][j] = new LED(x, y, radius);
+      
+      matrix[i][j] = new LED(x, y, radius, port);
+      port++;
     }
   }  
 }
@@ -45,8 +54,6 @@ void draw() {
   threshold.loadPixels();
   
   int[] depth = kinect.getRawDepth();
-
-
  
   for (int x = 0; x < kinect.width; x++) {
     for (int y = 0; y < kinect.height; y++) {
@@ -73,12 +80,16 @@ void draw() {
       int y = (int) matrix[i][j].position.y - radius;
       
       PImage newImg = threshold.get(x, y, radius*2, radius*2);
+      LED led = matrix[i][j];
+      
       //image(newImg, x, y);
    
       if (isAverageBlack(newImg)) {
-        matrix[i][j].turnOff();
+        led.turnOff();
+        arduino.digitalWrite(led.port, Arduino.LOW);
       } else {
-        matrix[i][j].turnOn();
+        led.turnOn();
+        arduino.digitalWrite(led.port, Arduino.HIGH);
       }
     }
   } 
@@ -87,16 +98,19 @@ void draw() {
 class LED {
   PVector position;
   int radius;
+  int port;
 
-  LED(int x, int y, int r) {
+  LED(int x, int y, int r, int p) {
     position = new PVector(x, y);
     radius = r;
+    port = p;
   }
   
   void display(boolean turnOn) {
     stroke(255);
     fill(turnOn ? 255 : 0);
     ellipse(position.x, position.y, radius*2, radius*2);
+    
   }
   
   void turnOn() {
