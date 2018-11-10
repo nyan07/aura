@@ -13,38 +13,40 @@ float maxThresh = 0.8;
 int cols = 7;
 int rows = 5;
 int side = 92;
+int radius = 10;
 int top, left;
 
-int radius = 10;
-
 LED[][] matrix = new LED[cols][rows];
+int[][] ARDUINO_PORTS = {
+  { 1,  2,  3,  4,  5,  6,  7},
+  { 8,  9, 10, 11, 12, 13, 14},
+  {15, 16, 17, 18, 19, 20, 21},
+  {22, 23, 24, 25, 26, 27, 28},
+  {29, 30, 31, 32, 33, 34, 35}
+};
 
 void setup() {
   size(1280, 480);
-  
+   
   kinect = new Kinect(this);
   kinect.initDepth();
   kinect.initVideo();
-  
+    
+  threshold = createImage(kinect.width, kinect.height, RGB);
+ 
   arduino = new Arduino(this, Arduino.list()[3], 57600);
-  for (int i=0; i < 14; i++){
-    arduino.pinMode(i, Arduino.OUTPUT);
-  }
   
   top = ((kinect.height - (side * rows)) / 2) + (side / 2);
-  left =  ((kinect.width - (side * cols)) / 2) + (side / 2);
-  
-  threshold = createImage(kinect.width, kinect.height, RGB);
-  
-  int port = 0;
-  
+  left = ((kinect.width - (side * cols)) / 2) + (side / 2);
+
   for (int i = 0; i < cols; i++) {
     for (int j = 0; j < rows; j++) {
       int x = left + side * i;
       int y = top + side * j;
+      int port = ARDUINO_PORTS[i][j];
       
       matrix[i][j] = new LED(x, y, radius, port);
-      port++;
+      arduino.pinMode(port, Arduino.OUTPUT);
     }
   }  
 }
@@ -79,12 +81,10 @@ void draw() {
       int x = (int) matrix[i][j].position.x - radius;
       int y = (int) matrix[i][j].position.y - radius;
       
-      PImage newImg = threshold.get(x, y, radius*2, radius*2);
+      PImage point = threshold.get(x, y, radius*2, radius*2);
       LED led = matrix[i][j];
-      
-      //image(newImg, x, y);
    
-      if (isAverageBlack(newImg)) {
+      if (isAverageBlack(point)) {
         led.turnOff();
         arduino.digitalWrite(led.port, Arduino.LOW);
       } else {
@@ -122,28 +122,28 @@ class LED {
   }
 }
 
-// These functions come from: http://graphics.stanford.edu/~mdfisher/Kinect.html
-float rawDepthToMeters(int depthValue) {
-  if (depthValue < 2047) {
-    return (float)(1.0 / ((double)(depthValue) * -0.0030711016 + 3.3309495161));
-  }
-  return 0.0f;
-}
-
-boolean isAverageBlack(final PImage img) {
-  img.loadPixels();
-  color b = 0, w = 0;
+boolean isAverageBlack(final PImage point) {
+  point.loadPixels();
+  color b = 0, w = 0, white = color(255);
  
-  for (final color c : img.pixels) {
-    if (c == color(255)) {
+  for (final color c : point.pixels) {
+    if (c == white) {
       w++;
     } else {
       b++;
     }
   }
  
-  b /= img.pixels.length;
-  w /= img.pixels.length;
+  b /= point.pixels.length;
+  w /= point.pixels.length;
  
   return b > w;
+}
+
+// These functions come from: http://graphics.stanford.edu/~mdfisher/Kinect.html
+float rawDepthToMeters(int depthValue) {
+  if (depthValue < 2047) {
+    return (float)(1.0 / ((double)(depthValue) * -0.0030711016 + 3.3309495161));
+  }
+  return 0.0f;
 }
