@@ -28,7 +28,7 @@ O sensor Kinect é um dispositivo lançado em 4 de Novembro de 2010 como um aces
     \label{fig:kinect_componentes}
 \end{figure}
 \vspace*{-0,9cm}
-{\raggedright \fonte{\citeonline{microsoft}}}\\
+{\raggedright \fonte{Adaptado de \citeonline{microsoft}}}\\
 
 Dentre seus componentes, o que mais nos interessa no contexto deste trabalho, é o sensor de profundidade. \citeonline{ashley} afirmam que a produção de dados tridimensionais é a principal função do Kinect. Ele difere de qualquer outro dispositivo de entrada justamente porque provê uma terceira dimensão e, para tanto, se utiliza de um emissor e uma câmera de infravermelho. Segundo \citeonline{lucero} o emissor de infravermelhos projeta um padrão estruturado de luz infravermelha, enquanto a câmera lê esses raios e interpreta a deformação da projeção, convertendo essa informação em valores de profundidade e, consequentemente, medindo a distância entre o objeto e o sensor. De acordo com \citeonline{correia} estas medidas baseiam-se em triangulação tendo em conta o emissor, a câmera e as posições dos pixels no cenário. A profundidade é codificada numa escala de cinzas. Quanto mais escuro o pixel, mais próximo do sensor está esse ponto no espaço. Sendo que, pixels pretos indicam que não existe informação de profundidade. Isto ocorre no caso dos pontos estarem muito longe, impossibilitando a sua captura, no caso de estarem numa área onde não haja pontos do emissor de infravermelhos, no caso de o objeto refletir mal a luz infravermelha ou, finalmente, no caso de os pontos estarem muito próximos do sensor, uma vez que o campo de visão do Kinect é limitado em cerca de 80 centímetros a 4 metros.
 
@@ -42,7 +42,7 @@ Considerando as limitações do Kinect, a que mais impactou este projeto é caus
     \label{fig:kinect_sombras}
 \end{figure}
 \vspace*{-0,9cm}
-{\raggedright \fonte{\citeonline{lucero}}}\\
+{\raggedright \fonte{Adaptado de \citeonline{lucero}}}\\
 
 O Microsoft Kinect atua como interface da instalação interativa proposta neste trabalho sendo utilizado como fonte de entrada de dados (\textit{input}) para mapear o ambiente tridimensional. O mesmo foi configurado através do \textit{script} para considerar a captura de objetos em uma área específica entre a grade e o solo, dessa maneira, apesar de não ser possível impedir a criação de sombras, conforme falado anteriormente, podemos, pelo menos, desconsiderar a grade como uma fonte de entrada de dados. A figura \ref{fig:kinect_exemplo} mostra dois exemplos de imagens criadas a partir dos dados capturados pelo sensor. À esquerda temos um caso sem a configuração mencionada acima e à direita uma imagem com o sensor já calibrado.
 
