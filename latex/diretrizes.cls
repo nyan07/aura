@@ -70,6 +70,8 @@
 }
 \newcommand{\listofquadrosname}{LISTA DE QUADROS}
 
+% Espaçamento entre linhas de tabelas e quadros
+\renewcommand{\arraystretch}{1.5}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % ESTILO DE ELEMENTOS
@@ -240,7 +242,7 @@
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 % Redefinição de fontes
-\renewcommand{\ABNTEXchapterfont}{\normalfont\bfseries}
+\renewcommand{\ABNTEXchapterfont}{\normalfont\bfseries\MakeUppercase}
 \renewcommand{\ABNTEXchapterfontsize}{\normalsize}
 
 \renewcommand{\ABNTEXpartfont}{\normalfont}
@@ -249,7 +251,7 @@
 \renewcommand{\ABNTEXsectionfont}{\normalfont\MakeUppercase}
 \renewcommand{\ABNTEXsectionfontsize}{\Large}
 
-\renewcommand{\ABNTEXsubsectionfont}{\normalfont}
+\renewcommand{\ABNTEXsubsectionfont}{\normalfont\bfseries}
 \renewcommand{\ABNTEXsubsectionfontsize}{\normalsize}
 
 \renewcommand{\ABNTEXsubsubsectionfont}{\normalfont}
@@ -268,7 +270,7 @@
 
 \renewcommand*{\cftsectionfont}{\normalfont}
 \renewcommand*{\cftpartfont}{\normalfont}
-\renewcommand*{\cftsubsectionfont}{\normalfont}
+\renewcommand*{\cftsubsectionfont}{\normalfont\bfseries}
 \renewcommand*{\cftsubsubsectionfont}{\normalfont}
 
 % Alteração da indentação dos itens do sumário
