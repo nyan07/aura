@@ -1,5 +1,9 @@
 import org.openkinect.freenect.*;
 import org.openkinect.processing.*;
+import org.openkinect.tests.*;
+
+import org.openkinect.freenect.*;
+import org.openkinect.processing.*;
 import processing.serial.*;
 import cc.arduino.*;
 
@@ -7,8 +11,8 @@ Arduino arduino;
 Kinect kinect;
 
 PImage threshold;
-float minThresh = 0.5;
-float maxThresh = 0.8;
+float minThresh = 0;
+float maxThresh = 1;
 
 int cols = 7;
 int rows = 5;
@@ -16,22 +20,23 @@ int side = 92;
 int radius = 10;
 int top, left;
 
-LED[][] matrix = new LED[cols][rows];
+LED[][] matrix = new LED[rows][cols];
 int[][] ARDUINO_PORTS = {
-  { 1,  2,  3,  4,  5,  6,  7},
-  { 8,  9, 10, 11, 12, 13, 14},
-  {15, 16, 17, 18, 19, 20, 21},
-  {22, 23, 24, 25, 26, 27, 28},
-  {29, 30, 31, 32, 33, 34, 35}
+  { 1,  2,  3,  4,  5,  6,  7 },
+  { 1,  2,  3,  4,  5,  6,  7 },
+  { 1,  2,  3,  4,  5,  6,  7 },
+  { 1,  2,  3,  4,  5,  6,  7 },
+  { 1,  2,  3,  4,  5,  6,  7 }
 };
 
 void setup() {
   size(1280, 480);
-   
+  
   kinect = new Kinect(this);
   kinect.initDepth();
-  kinect.initVideo();
-    
+  kinect.initVideo();    
+  kinect.enableMirror(true);
+  
   threshold = createImage(kinect.width, kinect.height, RGB);
  
   arduino = new Arduino(this, Arduino.list()[3], 57600);
@@ -39,10 +44,10 @@ void setup() {
   top = ((kinect.height - (side * rows)) / 2) + (side / 2);
   left = ((kinect.width - (side * cols)) / 2) + (side / 2);
 
-  for (int i = 0; i < cols; i++) {
-    for (int j = 0; j < rows; j++) {
-      int x = left + side * i;
-      int y = top + side * j;
+  for (int i = 0; i < rows; i++) {
+    for (int j = 0; j < cols; j++) {
+      int x = left + side * j;
+      int y = top + side * i;
       int port = ARDUINO_PORTS[i][j];
       
       matrix[i][j] = new LED(x, y, radius, port);
@@ -60,6 +65,7 @@ void draw() {
   for (int x = 0; x < kinect.width; x++) {
     for (int y = 0; y < kinect.height; y++) {
       int offset = x + y * kinect.width;
+        
       int d = depth[offset];
       float distanceInmeters = rawDepthToMeters(d);
       
@@ -75,14 +81,15 @@ void draw() {
   image(kinect.getVideoImage(), 0, 0);
   image(threshold, 640, 0);
   
-  for (int i = 0; i < cols; i++) {
-    for (int j = 0; j < rows; j++) {
+  for (int i = 0; i < rows; i++) {
+    for (int j = 0; j < cols; j++) {
       
       int x = (int) matrix[i][j].position.x - radius;
       int y = (int) matrix[i][j].position.y - radius;
       
       PImage point = threshold.get(x, y, radius*2, radius*2);
       LED led = matrix[i][j];
+      println(led.port);
    
       if (isAverageBlack(point)) {
         led.turnOff();
