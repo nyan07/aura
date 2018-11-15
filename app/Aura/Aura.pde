@@ -89,7 +89,6 @@ void draw() {
       
       PImage point = threshold.get(x, y, radius*2, radius*2);
       LED led = matrix[i][j];
-      println(led.port);
    
       if (isAverageBlack(point)) {
         led.turnOff();
