@@ -12,21 +12,21 @@ Kinect kinect;
 
 PImage threshold;
 float minThresh = 0;
-float maxThresh = 1;
+float maxThresh = 1.5;
 
 int cols = 7;
 int rows = 5;
 int side = 92;
-int radius = 10;
+int radius = 5;
 int top, left;
 
 LED[][] matrix = new LED[rows][cols];
 int[][] ARDUINO_PORTS = {
-  { 1,  2,  3,  4,  5,  6,  7 },
-  { 1,  2,  3,  4,  5,  6,  7 },
-  { 1,  2,  3,  4,  5,  6,  7 },
-  { 1,  2,  3,  4,  5,  6,  7 },
-  { 1,  2,  3,  4,  5,  6,  7 }
+  {  7,   6,   5,   4,   3,   2,   8 },
+  { 14,  15,  16,  17,  18,  19,  20 },
+  { 22,  24,  26,  28,  30,  32,  34 },
+  { 40,  42,  44,  46,  48,  50,  52 },
+  { 31,  33,  35,  37,  39,  41,  43 }
 };
 
 void setup() {
