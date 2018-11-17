@@ -87,9 +87,9 @@ Para validar o projeto foi construído um protótipo com o Microsoft Kinect, um 
   \fonte{Elaborada pela autora}\\
 \end{figure}
 
-No que diz respeito a integração dos elementos presentes na obra, foi possível constatar seu correto funcionamento já em conformidade com o modelo da proposta introduzida na seção \ref{sec:solucao} \nameref{sec:solucao}, pois os dispositivos utilizados para prototipação são os mesmos ou muito similares aos que encontramos no trabalho final. A partir disso, o desafio se concentrou em construir a malha de LEDs, bem como fazer a colagem da fibra ótica em cada um deles, além de criar a versão final do \textit{script} que deveria funcionar como uma matriz e carecia de otimização em sua lógica de detecção de presença.
+No que diz respeito a integração dos elementos presentes na obra, foi possível constatar seu correto funcionamento já em conformidade com o modelo da proposta introduzida na \fullref{sec:solucao}, pois os dispositivos utilizados para prototipação são os mesmos ou muito similares aos que encontramos no trabalho final. A partir disso, o desafio se concentrou em construir a malha de LEDs, bem como fazer a colagem da fibra ótica em cada um deles, além de criar a versão final do \textit{script} que deveria funcionar como uma matriz e carecia de otimização em sua lógica de detecção de presença.
 
-Na figura \ref{fig:prototipo_escuro} podemos ver uma amostra do protótipo sendo executado em um ambiente com baixa luminosidade. Constatou-se que a luz conseguia se propagar ao longo da fibra, mas que se mostrava com maior intensidade em suas extremidades. A partir disso foi elaborada uma proposta de junção dos LEDs com a fibra ótica que será apresentada mais adiante na subseção \ref{sec:malha} \nameref{sec:malha}.
+Na figura \ref{fig:prototipo_escuro} podemos ver uma amostra do protótipo sendo executado em um ambiente com baixa luminosidade. Constatou-se que a luz conseguia se propagar ao longo da fibra, mas que se mostrava com maior intensidade em suas extremidades. A partir disso foi elaborada uma proposta de junção dos LEDs com a fibra ótica que será apresentada mais adiante na  \fullref{sec:malha}.
 
 \begin{figure}[H]
   \begin{center}
@@ -105,7 +105,7 @@ Na figura \ref{fig:prototipo_escuro} podemos ver uma amostra do protótipo sendo
 \section{DESCRIÇÃO DA SOLUÇÃO}
 \label{sec:solucao}
 
-Para efeitos de organização e com o intuito de facilitar a compreensão, esta seção foi organizada de acordo com os elementos presentes no modelo de instalação interativa proposto por \cite{sogabe2011} já cobertos na seção \ref{sec:instalacoes_interativas} \nameref{sec:instalacoes_interativas}. São eles: a interface, representada pelo sensor Microsoft Kinect, que parece invisível dado que o interator precisa apenas estar com o seu corpo presente no espaço para que a obra se materialize; o gerenciamento digital que é feito através de um computador e da utilização de Processing para execução e manutenção do programa; e, por fim, o dispositivo de saída de dados, aqui reprensentado por uma composição entre a malha de LEDs e o Arduino, traduzindo informação em luz.
+Para efeitos de organização e com o intuito de facilitar a compreensão, esta seção foi organizada de acordo com os elementos presentes no modelo de instalação interativa proposto por \cite{sogabe2011} já cobertos na \fullref{sec:instalacoes_interativas}. São eles: a interface, representada pelo sensor Microsoft Kinect, que parece invisível dado que o interator precisa apenas estar com o seu corpo presente no espaço para que a obra se materialize; o gerenciamento digital que é feito através de um computador e da utilização de Processing para execução e manutenção do programa; e, por fim, o dispositivo de saída de dados, aqui reprensentado por uma composição entre a malha de LEDs e o Arduino, traduzindo informação em luz.
 
 Devido ao recurso de capturar objetos e movimentos no espaço, optou-se pelo uso do sensor Microsoft Kinect que, conectado a um computador, é responsável por captar a área onde os espectadores se encontram. Integrando-o a uma placa Arduino é possível controlar uma série de LEDs, dispostos em uma grade pendente ao teto. Cada LED possui cabos de fibra ótica \textit{side light} (com emissão de luz lateral) conectados à ele que se iluminam conforme os espectadores caminham sob a grade. Na figura \ref{fig:esquema} podemos ver um esquema de montagem da obra.
 
@@ -245,12 +245,16 @@ Cada LED ocupa uma área na imagem processada pelo sistema computacional e conta
   \fonte{Elaborada pela autora}\\
 \end{figure}
 
-A partir da figura \ref{fig:led_fibra_otica} é possível constatar a diferença de exposição em ambientes com distintos graus de luminosidade. Ainda que a luz seja visível ao se observar o LED em um ambiente com alta incidência de luz e, isso viabilize a exposição do trabalho mesmo em condições como esta, se nota uma discrepância considerável quando voltamos nossos olhos para o terceiro quadrante, onde o LED é apresentado em ambiente com baixa luminosidade. A peça ganha destaque e a cor azul se propaga com maior intensidade, o que reforça a escolha do cubo preto como sendo o meio ideal para exibição desse trabalho.
+A partir da figura \ref{fig:led_fibra_otica} é possível constatar a diferença de exposição em ambientes com distintos graus de luminosidade. Ainda que a luz seja visível ao se observar o LED em um ambiente com alta incidência de luz e, isso viabilize a exposição do trabalho mesmo em condições como esta, se nota uma discrepância considerável quando voltamos nossos olhos para o terceiro quadrante, onde o LED é apresentado em ambiente com baixa luminosidade. A peça ganha destaque e a cor azul se propaga com maior intensidade.
 
+\section{PROJETO DE INSTALAÇÃO}
+
+A obra foi disposta em um ambiente de laboratório para que fossem realizados testes de funcionamento e iluminação. Na figura \ref{fig:trabalho} podemos ver um exemplo de interação com o público em um ambiente com luz controlada. 
+   
    
 \begin{figure}[H]
   \begin{center}
-    \caption{Trabalho em execução em ambiente de laboratório}
+    \caption{Interação com o público}
     \vspace*{0,2cm}
     \includegraphics[width=0.8\textwidth]{./04-figuras/trabalho}
     \label{fig:trabalho}
@@ -258,3 +262,16 @@ A partir da figura \ref{fig:led_fibra_otica} é possível constatar a diferença
   \vspace*{-0,9cm}
   \fonte{Elaborada pela autora}\\
 \end{figure}
+
+
+\begin{figure}[H]
+  \begin{center}
+    \caption{Espaço da instalação na pinacoteca Barão de Santo Ângelo}
+    \vspace*{0,2cm}
+    \includegraphics[width=0.8\textwidth]{./04-figuras/pinacoteca}
+    \label{fig:pinacoteca}
+  \end{center}
+  \vspace*{-0,9cm}
+  \fonte{Adaptado de https://www.ufrgs.br/institutodeartes}\\
+\end{figure}
+

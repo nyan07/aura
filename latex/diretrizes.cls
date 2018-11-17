@@ -108,6 +108,7 @@
 % Automatiza o processo de aspas
 \newcommand{\aspas}[1]{``{#1}''}
 
+\newcommand*{\fullref}[1]{\hyperref[{#1}]{\autoref*{#1} \nameref*{#1}}}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % COMANDOS DE DADOS
@@ -268,7 +269,7 @@
 % Insere espaço entre os itens do sumário de diferentes capítulos
 \setlength{\cftbeforechapterskip}{0.0em \@plus\p@}
 
-\renewcommand*{\cftsectionfont}{\normalfont}
+\renewcommand*{\cftsectionfont}{\normalfont}}
 \renewcommand*{\cftpartfont}{\normalfont}
 \renewcommand*{\cftsubsectionfont}{\normalfont\bfseries}
 \renewcommand*{\cftsubsubsectionfont}{\normalfont}
