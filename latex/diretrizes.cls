@@ -81,7 +81,7 @@
 \renewcommand{\textual}{%
 	
     %\pagenumbering{arabic} % Inicia a numeração em 1
-	\setcounter{page}{7} 			%>>>INDICAR PAGINA DE INTRODUÇÂO
+	\setcounter{page}{11} 			%>>>INDICAR PAGINA DE INTRODUÇÂO
     \ifthenelse{\equal{\ABNTEXisarticle}{true}}{%
         \pagestyle{plain}
     }
