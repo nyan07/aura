@@ -75,7 +75,7 @@
         <relationship name="project" type="1/1" destination="PROJECT" idrefs="z104"></relationship>
     </object>
     <object type="UISETTINGS" id="z103">
-        <attribute name="pdfviewscrollrect" type="string">{{0, 38386.959390863121}, {592.50253807104411, 680.64974619144778}}</attribute>
+        <attribute name="pdfviewscrollrect" type="string">{{0, 33228.048223350241}, {592.50253807104411, 680.64974619163695}}</attribute>
         <attribute name="showpdfthumbnails" type="bool">0</attribute>
         <attribute name="selectedcontrolstab" type="int16">0</attribute>
         <attribute name="maxoutlinedepth" type="int16">7</attribute>
@@ -90,7 +90,7 @@
         <attribute name="name" type="string">main</attribute>
         <attribute name="folder" type="string">/Users/daniela/TCC/Aura/latex</attribute>
         <relationship name="mainfile" type="1/1" destination="FILE" idrefs="z125"></relationship>
-        <relationship name="selected" type="1/1" destination="FILE" idrefs="z129"></relationship>
+        <relationship name="selected" type="1/1" destination="FILE" idrefs="z111"></relationship>
         <relationship name="settings" type="1/1" destination="SETTINGS" idrefs="z102"></relationship>
         <relationship name="uisettings" type="1/1" destination="UISETTINGS" idrefs="z103"></relationship>
         <relationship name="items" type="0/0" destination="PROJECTITEM" idrefs="z123 z115 z134 z114 z120 z124 z129 z141 z113 z140 z116 z110 z117 z130 z131 z105 z126 z119 z118 z121 z108 z127 z112 z132 z109 z122 z111 z135 z125 z133 z107"></relationship>
@@ -180,12 +180,12 @@
         <relationship name="bookmarks" type="0/0" destination="BOOKMARK" idrefs="z137"></relationship>
     </object>
     <object type="TEXFILE" id="z111">
-        <attribute name="visiblerect" type="string">{{0, 306.5}, {872, 432.5}}</attribute>
-        <attribute name="cursor" type="string">{1767, 0}</attribute>
+        <attribute name="visiblerect" type="string">{{0, 225}, {611, 667.5}}</attribute>
+        <attribute name="cursor" type="string">{2336, 0}</attribute>
         <attribute name="wasopen" type="bool">7</attribute>
-        <attribute name="lasteditdate" type="date">564153230.73458802700042724609</attribute>
+        <attribute name="lasteditdate" type="date">564187495.31919205188751220703</attribute>
         <attribute name="istext" type="bool">1</attribute>
-        <attribute name="fileloaddate" type="date">564153230.56546401977539062500</attribute>
+        <attribute name="fileloaddate" type="date">564187496.76209902763366699219</attribute>
         <attribute name="extension" type="string">tex</attribute>
         <attribute name="sortindex" type="int32">18</attribute>
         <attribute name="name" type="string">introducao.tex</attribute>
