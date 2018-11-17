@@ -1,20 +1,20 @@
 \chapter{COMPOSIÇÃO DA OBRA}
-Esta capítulo está organizado em três partes. Primeiro vamos trazer um breve relato sobre os dispositivos e tecnologias utilizados, depois apresentaremos o protótipo construído para validar o \textit{software} e o \textit{hardware} escolhidos para elaboração deste projeto e, por fim, vamos fazer uma descrição da solução, apresentando as principais barreiras encontradas ao longo do percurso. 
+Esta capítulo está organizado em três partes. Primeiro vamos trazer um breve relato sobre os dispositivos e tecnologias utilizados, depois apresentaremos o protótipo construído para validar o \textit{software} e o \textit{hardware} escolhidos para elaboração da obra e, por fim, vamos fazer uma descrição da solução, apresentando as principais barreiras encontradas ao longo do percurso. 
 
 \section{DISPOSITIVOS E TECNOLOGIAS}
 
-Com o intuito de manter documentada, possibilitando a reprodução ou atualização deste projeto no futuro, se faz necessário listar as versões e configurações aplicadas (quadro \ref{quadro:dispositivos}), bem como introduzir os principais dispositivos e tecnologias utilizados para a construção deste projeto. Dentre os componentes essencias em termos de \textit{hardware} temos o Microsoft Kinect, o Arduino e o computador; enquanto o principal \textit{software} é a Processing, responsável por orquestrar o funcionamento destes equipamentos em conjunto. 
+Com o intuito de manter documentada, possibilitando a reprodução ou atualização deste projeto no futuro, se faz necessário listar as versões e configurações aplicadas (quadro \ref{quadro:dispositivos}), bem como introduzir os principais dispositivos e tecnologias utilizados. Dentre os componentes essenciais em termos de \textit{hardware} temos o Microsoft Kinect, o Arduino e o computador; enquanto o principal \textit{software} é a Processing, responsável por orquestrar o funcionamento destes equipamentos em conjunto. 
 
 
 \begin{quadro}[H]
-\caption{\label{quadro:dispositivos}Especificações dos equipamentos e tecnologias utilizados}
+\caption{\label{quadro:dispositivos}Especificações de \textit{hardware} e \textit{software} utilizados}
 \begin{center}  
   \begin{tabulary}{0.8\textwidth}{|L|L|}
   
   \hline
   \textbf{Dispositivo ou \textit{software}} & \textbf{Requisitos} \\ \hline
-  Microsoft Kinect  & Versão 1, Modelo 1414 \\ \hline
-  Arduino & Modelo Uno para o protótipo e Modelo Mega para o trabalho final \\ \hline
+  Microsoft Kinect  & Versão 1 - Modelo 1414 \\ \hline
+  Arduino & Modelo Uno para o protótipo e Modelo Mega 2560 para o trabalho final \\ \hline
   Computador & Suporte a versão da Processing utilizada e disponibilidade de 2 portas USB \\ \hline
   Processing & Versão 3.3.7 \\ \hline
   \end{tabulary}
@@ -24,7 +24,7 @@ Com o intuito de manter documentada, possibilitando a reprodução ou atualizaç
 \end{quadro}
 
 
-A figura \ref{fig:dispositivos} mostra como esses dispositivos estão interligados: o Kinect envia dados de profundidade para o computador, que através de um programa escrito em Processing, realiza cálculos e processamento das informações recebidos e, em seguida, envia instruções para o Arduino. Esse processo é cíclico e constante durante toda a execução da obra.
+A figura \ref{fig:dispositivos} mostra como esses dispositivos estão interligados: o Kinect envia dados de profundidade para o computador, que através de um programa escrito em Processing, realiza cálculos e processamento das informações recebidas e, em seguida, envia instruções para o Arduino. Esse processo é cíclico e constante durante toda a execução da obra.
 
 \begin{figure}[H]
   \begin{center}
@@ -57,18 +57,18 @@ Dentre seus componentes, o que mais nos interessa no contexto deste trabalho, é
 
 \subsection{Arduino}
 
-O Arduino é uma plataforma de prototipagem eletrônica de \textit{hardware} livre e de placa única \cite{arduino}. De acordo com o \textit{site} oficial do projeto, o objetivo é criar ferramentas acessíveis, com baixo custo, flexíveis e fáceis de usar. Para \citeonline{souza2011} ela é ideal para a criação de dispositivos que permitam interação com o ambiente, podendo utilizar diversas fontes de entrada como, por exemplo, sensores de temperatura, luz ou som, e como saída LEDs, motores, \textit{displays}, auto-falantes, entre outros, criando desta forma possibilidades ilimitadas. Podemos dizer à placa o que fazer enviando uma série de instruções ao microcontrolador. Para isso é necessário utilizar a linguagem de programação do Arduino (baseada em Wiring) e o seu \textit{software} (IDE - \textit{Integrated Development Environment} ou Ambiente de Desenvolvimento Integrado), baseada em Processing \cite{arduino}. 
+O Arduino é uma plataforma de prototipagem eletrônica de \textit{hardware} livre e de placa única \cite{arduino}. De acordo com o \textit{site} oficial do projeto, o objetivo é criar ferramentas acessíveis, com baixo custo, flexíveis e fáceis de usar. Para \citeonline{souza2011} ela é ideal para a criação de dispositivos que permitam interação com o ambiente, podendo utilizar diversas fontes de entrada como, por exemplo, sensores de temperatura, luz ou som, e como saída LEDs, motores, \textit{displays}, auto-falantes, entre outros, criando desta forma possibilidades ilimitadas. É possível dizer à placa o que fazer enviando uma série de instruções ao microcontrolador. Para isso é necessário utilizar a linguagem de programação do Arduino (baseada em Wiring) e o seu \textit{software} (IDE - \textit{Integrated Development Environment} ou Ambiente de Desenvolvimento Integrado), baseada em Processing \cite{arduino}. 
 
 
 \subsection{Processing}
 \label{sec:processing}
 
-De acordo com \citeonline[p. 115]{santos} Processing é a primeira ferramenta criada para artistas por artistas e o seu desenvolvimento foi iniciado no MIT Media Lab por dois estudantes de graduação: Casey Reas e Benjamin Fry. Segundo informações contidas no \textit{site} oficial do projeto, \citeonline{processing} é uma plataforma e uma linguagem de programação de código aberto (\textit{open source}) para prototipação de \textit{software} dentro do contexto das artes visuais. Disponível desde 2001, a Processing vem promovendo a alfabetização em \textit{software} dentro das artes visuais e a alfabetização visual dentro da tecnologia. Há dezenas de milhares de estudantes, artistas, designers, pesquisadores e amadores que usam Processing para aprender e criar protótipos.
+De acordo com \citeonline[p. 115]{santos} Processing é a primeira ferramenta criada para artistas por artistas e o seu desenvolvimento foi iniciado no MIT Media Lab por dois estudantes de graduação: Casey Reas e Benjamin Fry. Segundo informações contidas no \textit{site} oficial do projeto, \citeonline{processing} é uma plataforma e uma linguagem de programação de código aberto (\textit{open source}) para prototipação de \textit{software} dentro do contexto das artes visuais. Disponível desde 2001, a Processing vem promovendo a alfabetização em \textit{software} dentro das artes visuais e a alfabetização visual dentro da tecnologia. 
 
 \subsection{Computador}
 \label{sec:computador}
 
-Este trabalho requer a utilização de um computador para processar os dados capturados pelo Kinect e enviar ao Arduino. O projeto foi desenvolvido e testado em equipamentos com configurações distintas, sendo que seus únicos requisitos são o suporte à instalação da versão de Processing mencionada na subseção \ref{sec:processing} \nameref{sec:processing} e a disponibilidade de duas portas USB, uma para cada dispositivo.
+Este trabalho requer a utilização de um computador para processar os dados capturados pelo Kinect e enviar ao Arduino. O projeto foi desenvolvido e testado em equipamentos com configurações distintas, sendo que seus únicos requisitos são o suporte à instalação da versão de Processing mencionada no quadro \ref{quadro:dispositivos}, disponível no início deste capítulo, e duas portas USB, uma para cada dispositivo.
 
 
 
@@ -87,9 +87,9 @@ Para validar o projeto foi construído um protótipo com o Microsoft Kinect, um 
   \fonte{Elaborada pela autora}\\
 \end{figure}
 
-No que diz respeito a integração dos elementos presentes na obra, foi possível constatar seu correto funcionamento já em conformidade com o modelo da proposta introduzida na seção \ref{sec:solucao} \nameref{sec:solucao}, pois os dispositivos utilizados para prototipação são os mesmos ou muito similares aos que encontramos no trabalho final. A partir disso, o desafio se concentrou em construir a malha de LEDs, bem como fazer a colagem da fibra ótica em cada um deles, além de criar a versão final do \textit{script} que deveria funcionar como uma matriz e carecia de uma otimização em sua lógica de detecção de presença.
+No que diz respeito a integração dos elementos presentes na obra, foi possível constatar seu correto funcionamento já em conformidade com o modelo da proposta introduzida na seção \ref{sec:solucao} \nameref{sec:solucao}, pois os dispositivos utilizados para prototipação são os mesmos ou muito similares aos que encontramos no trabalho final. A partir disso, o desafio se concentrou em construir a malha de LEDs, bem como fazer a colagem da fibra ótica em cada um deles, além de criar a versão final do \textit{script} que deveria funcionar como uma matriz e carecia de otimização em sua lógica de detecção de presença.
 
-Na figura \ref{fig:prototipo_escuro} podemos ver uma amostra do protótipo sendo executado em um ambiente com baixa luminosidade. Constatou-se que a luz conseguia se propagar ao longo da fibra, mas que se mostrava com maior intensidade em suas extremidades. A partir disso pensou-se na proposta de junção dos LEDs com a fibra ótica apresentada na seção \ref{sec:malha} \nameref{sec:malha}.
+Na figura \ref{fig:prototipo_escuro} podemos ver uma amostra do protótipo sendo executado em um ambiente com baixa luminosidade. Constatou-se que a luz conseguia se propagar ao longo da fibra, mas que se mostrava com maior intensidade em suas extremidades. A partir disso foi elaborada uma proposta de junção dos LEDs com a fibra ótica que será apresentada mais adiante na subseção \ref{sec:malha} \nameref{sec:malha}.
 
 \begin{figure}[H]
   \begin{center}
@@ -105,7 +105,7 @@ Na figura \ref{fig:prototipo_escuro} podemos ver uma amostra do protótipo sendo
 \section{DESCRIÇÃO DA SOLUÇÃO}
 \label{sec:solucao}
 
-Para efeitos de organização e com o intuito de facilitar a compreensão esta seção foi organizada de acordo com os elementos presentes no modelo de instalação interativa proposto por \cite{sogabe2011} já cobertos na seção \ref{sec:instalacoes_interativas} \nameref{sec:instalacoes_interativas}. São eles: a interface, representada pelo sensor Microsoft Kinect, que parece invisível dado que o interator precisa apenas estar com o seu corpo presente no espaço para que a obra se materialize; o gerenciamento digital que é feito através de um computador e da utilização de Processing para execução e manutenção do programa; e, por fim, o dispositivo de saída de dados, aqui reprensentado por uma composição entre a malha de LEDs e o Arduino, traduzindo informação em luz.
+Para efeitos de organização e com o intuito de facilitar a compreensão, esta seção foi organizada de acordo com os elementos presentes no modelo de instalação interativa proposto por \cite{sogabe2011} já cobertos na seção \ref{sec:instalacoes_interativas} \nameref{sec:instalacoes_interativas}. São eles: a interface, representada pelo sensor Microsoft Kinect, que parece invisível dado que o interator precisa apenas estar com o seu corpo presente no espaço para que a obra se materialize; o gerenciamento digital que é feito através de um computador e da utilização de Processing para execução e manutenção do programa; e, por fim, o dispositivo de saída de dados, aqui reprensentado por uma composição entre a malha de LEDs e o Arduino, traduzindo informação em luz.
 
 Devido ao recurso de capturar objetos e movimentos no espaço, optou-se pelo uso do sensor Microsoft Kinect que, conectado a um computador, é responsável por captar a área onde os espectadores se encontram. Integrando-o a uma placa Arduino é possível controlar uma série de LEDs, dispostos em uma grade pendente ao teto. Cada LED possui cabos de fibra ótica \textit{side light} (com emissão de luz lateral) conectados à ele que se iluminam conforme os espectadores caminham sob a grade. Na figura \ref{fig:esquema} podemos ver um esquema de montagem da obra.
 
@@ -170,14 +170,14 @@ O gerencimento digital da obra é realizado através de um computador que execut
 
 \subsection{\textbf{Dispositivo de saída de dados}}
 
-O Arduino e a malha de LEDs, juntos, formam o dispositivo de saída de dados (\textit{output}) que recebe as informações mapeadas pelo sensor Kinect (entrada ou \textit{input}). Cada LED é controlado individualmente, para isso, optou-se pela utilização do Arduino Mega 2560 que possui 54 entradas/saídas digitais, suficientes para atender a proposta apresentada sem adicionar complexidade ao circuito.
+O Arduino e a malha de LEDs, juntos, formam o dispositivo de saída de dados (\textit{output}) que recebe as informações mapeadas pelo sensor Kinect (entrada ou \textit{input}). Cada LED precisa ser controlado individualmente, por isso optou-se pela utilização do Arduino Mega 2560 que possui 54 entradas/saídas digitais, suficientes para atender a proposta apresentada sem adicionar complexidade ao circuito.
 
 
-No que diz respeito ao \textit{software} específico para o Arduino pouca coisa foi necessária. A biblioteca Firmata foi utilizada para servir como ponte de comunicação entre o dispositivo e o computador. Através de um programa fornecido pela mesma e enviado para o microcontrolador, foi possível gerenciar a partir da Processing todos os recursos disponíveis na placa.
+Não foi necessário escrever um \textit{software} para executar no Arduino. Utilizou-se a biblioteca Firmata para servir como ponte de comunicação entre o dispositivo e o computador. Através de um programa fornecido pela mesma e enviado para o microcontrolador foi possível gerenciar, a partir da Processing, todos os recursos disponíveis na placa.
 
 \subsubsection{O circuito}
 
-As pernas negativas dos LED foram soldadas em um fio conectado na porta \textit{ground} do Arduino, enquanto as pernas positivas foram conectadas à fios e plugadas individualmente em portas digitais. Na figura \ref{fig:breadboard} podemos ver o esquema equivalente a uma linha da matriz de LEDs. As demais são conectadas da mesma maneira e só não foram adicionadas para não poluir a imagem.
+As pernas negativas dos LEDs foram soldadas em um fio conectado na porta \textit{ground} do Arduino, enquanto as pernas positivas foram conectadas à fios e plugadas individualmente em portas digitais. Na figura \ref{fig:breadboard} podemos ver o esquema equivalente a uma linha da matriz de LEDs. As demais são conectadas da mesma maneira e só não foram adicionadas para não poluir a imagem.
 
 \begin{figure}[H]
   \begin{center}
@@ -190,7 +190,7 @@ As pernas negativas dos LED foram soldadas em um fio conectado na porta \textit{
   \fonte{Elaborada pela autora}\\
 \end{figure}
 
-Foi constatada a necessidade de isolamento elétrico e de construir \textit{jumpers} plugáveis na placa. Para isso, alguns materiais foram necessários. Além do próprio LED, pinos metálicos foram utilizados para conectá-lo ao fio e este ao Arduino, \textit{cases} e tubos termoretráteis para isolamento das conexões, bem como a fibra ótica para causar o efeito proposto. O quadro  \ref{quadro:materiais} mostra as quantidades e especificações destes materiais por elemento luminescente.
+Constatou-se a necessidade de isolamento elétrico e de construir \textit{jumpers} plugáveis na placa. Para isso, alguns materiais foram necessários. Além do próprio LED, pinos metálicos foram utilizados para conectá-lo ao fio e este ao Arduino, \textit{cases} e tubos termoretráteis para isolamento das conexões, bem como a fibra ótica para causar o efeito proposto. O quadro  \ref{quadro:materiais} mostra as quantidades e especificações destes materiais por elemento luminescente.
 
 \begin{quadro}[H]
 \caption{\label{quadro:materiais}Materiais utilizados por elemento luminescente}
