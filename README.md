@@ -1,11 +1,13 @@
-# Aura: luz e tecnologia aplicadas na arte
+# Arte-Luz-Interatividade: uma abordagem do uso da tecnologia na arte e da luz como material
 
-Este repositório contém o meu trabalho de conclusão de curso no Bacharelado 
+Este repositório contém o meu trabalho de conclusão de curso do Bacharelado 
 em Artes Visuais da Universidade Federal do Rio Grande do Sul - UFRGS.
 
-Está sendo desenvolvido um trabalho que reune aplicações de arte e tecnologia 
-utilizando Microsoft Kinect (input) e Arduino (output).
-Se trata de uma obra de arte interativa onde LEDs (presos ao teto em uma grade) 
+Foi desenvolvido um trabalho que reune aplicações de arte e tecnologia 
+utilizando Microsoft Kinect (input), Arduino (output) e um computador para
+orquestrar o funcionamento destes dispositivos.
+
+Trata-se de uma obra de arte interativa onde LEDs (presos ao teto em uma grade) 
 acendem e apagam de acordo com a presença do espectador.
 
 ## Organização de diretórios
