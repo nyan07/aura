@@ -1,9 +1,9 @@
 \chapter{COMPOSIÇÃO DA OBRA}
-Esta capítulo está organizado em quatro partes. Primeiro vamos trazer um breve relato sobre os dispositivos e tecnologias utilizados, depois apresentaremos o protótipo construído para validar o \textit{software} e o \textit{hardware} escolhidos para elaboração da obra, em seguida vamos fazer uma descrição da solução, apresentando as principais barreiras encontradas ao longo do percurso e, por fim, apresentaremos o projeto de instalação. 
+Esta capítulo está organizado em quatro partes. Primeiro vamos trazer um breve relato sobre os dispositivos e tecnologias utilizados, depois apresentaremos o protótipo construído para validar o \textit{software} e o \textit{hardware} escolhidos para elaboração da obra, em seguida vamos fazer uma descrição da solução, apresentando as principais barreiras encontradas ao longo do percurso e, por fim, apresentaremos o projeto de instalação e montagem. 
 
 \section{DISPOSITIVOS E TECNOLOGIAS}
 
-Com o intuito de manter documentada, possibilitando a reprodução ou atualização deste projeto no futuro, se faz necessário listar as versões e configurações aplicadas (quadro \ref{quadro:dispositivos}), bem como introduzir os principais dispositivos e tecnologias utilizados. Dentre os componentes essenciais em termos de \textit{hardware} temos o Microsoft Kinect, o Arduino e o computador; enquanto o principal \textit{software} é a Processing, responsável por orquestrar o funcionamento destes equipamentos em conjunto. 
+Com o intuito de manter documentada, possibilitando a reprodução ou atualização deste projeto no futuro, se faz necessário listar as versões e configurações aplicadas (quadro \ref{quadro:dispositivos}), bem como introduzir os principais dispositivos e tecnologias utilizados. Dentre os componentes essenciais em termos de \textit{hardware} temos o Microsoft Kinect, o Arduino e o computador; enquanto o principal \textit{software} é a Processing, responsável por orquestrar o funcionamento destes equipamentos em conjunto, através de um \textit{script} desenvolvido ao longo desse trabalho. 
 
 
 \begin{quadro}[H]
@@ -57,7 +57,7 @@ Dentre seus componentes, o que mais nos interessa no contexto deste trabalho, é
 
 \subsection{Arduino}
 
-O Arduino é uma plataforma de prototipagem eletrônica de \textit{hardware} livre e de placa única \cite{arduino}. De acordo com o \textit{site} oficial do projeto, o objetivo é criar ferramentas acessíveis, com baixo custo, flexíveis e fáceis de usar. Para \citeonline{souza2011} ela é ideal para a criação de dispositivos que permitam interação com o ambiente, podendo utilizar diversas fontes de entrada como, por exemplo, sensores de temperatura, luz ou som, e como saída LEDs, motores, \textit{displays}, auto-falantes, entre outros, criando desta forma possibilidades ilimitadas. É possível dizer à placa o que fazer enviando uma série de instruções ao microcontrolador. Para isso é necessário utilizar a linguagem de programação do Arduino (baseada em Wiring) e o seu \textit{software} (IDE - \textit{Integrated Development Environment} ou Ambiente de Desenvolvimento Integrado), baseada em Processing \cite{arduino}. 
+O Arduino é uma plataforma de prototipação eletrônica de \textit{hardware} livre e de placa única \cite{arduino}. De acordo com o \textit{site} oficial do projeto, o objetivo é criar ferramentas acessíveis, com baixo custo, flexíveis e fáceis de usar. Para \citeonline{souza2011} ela é ideal para a criação de dispositivos que permitam interação com o ambiente, podendo utilizar diversas fontes de entrada como, por exemplo, sensores de temperatura, luz ou som, e como saída LEDs, motores, \textit{displays}, auto-falantes, entre outros, criando desta forma possibilidades ilimitadas. É possível dizer à placa o que fazer enviando uma série de instruções ao microcontrolador. Para isso é necessário utilizar a linguagem de programação do Arduino (baseada em Wiring) e o seu \textit{software} (IDE - \textit{Integrated Development Environment} ou Ambiente de Desenvolvimento Integrado), baseada em Processing \cite{arduino}. 
 
 
 \subsection{Processing}
@@ -68,7 +68,7 @@ De acordo com \citeonline[p. 115]{santos} Processing é a primeira ferramenta cr
 \subsection{Computador}
 \label{sec:computador}
 
-Este trabalho requer a utilização de um computador para processar os dados capturados pelo Kinect e enviar ao Arduino. O projeto foi desenvolvido e testado em equipamentos com configurações distintas, sendo que seus únicos requisitos são o suporte à instalação da versão de Processing mencionada no quadro \ref{quadro:dispositivos}, disponível no início deste capítulo, e duas portas USB, uma para cada dispositivo.
+Este trabalho requer a utilização de um computador para processar os dados capturados pelo Kinect e enviar ao Arduino. O projeto foi desenvolvido e testado em equipamentos com configurações distintas, sendo que, à princípio, seus únicos requisitos são o suporte à instalação da versão de Processing mencionada no quadro \ref{quadro:dispositivos}, disponível no início deste capítulo, e duas portas USB, uma para cada dispositivo. Não foram realizados testes de \textit{performance} para identificar a configuração mínima necessária para suportar o processamento de imagem executado. Estuda-se a possibilidade de utilização de um Raspberry PI (\citeyear{raspberry}), que é uma série de computadores de placa única que se conecta a um monitor e utiliza \textit{mouse} e teclado padrões, para obter como resultado uma instalação mais compacta e sem tantos dispositivos aparentes.
 
 
 
@@ -159,7 +159,7 @@ O gerencimento digital da obra é realizado através de um computador que execut
 
 \begin{figure}[H]
   \begin{center}
-    \caption{Captura da camera e imagem gerada a partir do sensor de profundidade do Microsoft Kinect associadas à pontos que identificam os LEDs na estrutura física}
+    \caption{Captura da câmera e imagem gerada a partir do sensor de profundidade do Microsoft Kinect associadas à pontos que identificam os LEDs na estrutura física}
     \vspace*{0,2cm}
     \includegraphics[width=0.8\textwidth]{./04-figuras/script}
     \label{fig:script}
@@ -175,9 +175,9 @@ O Arduino e a malha de LEDs, juntos, formam o dispositivo de saída de dados (\t
 
 Não foi necessário escrever um \textit{software} para executar no Arduino. Utilizou-se a biblioteca Firmata para servir como ponte de comunicação entre o dispositivo e o computador. Através de um programa fornecido pela mesma e enviado para o microcontrolador foi possível gerenciar, a partir da Processing, todos os recursos disponíveis na placa.
 
-\subsubsection{O circuito}
+\subsubsection{Circuito}
 
-As pernas negativas dos LEDs foram soldadas em um fio conectado na porta \textit{ground} do Arduino, enquanto as pernas positivas foram conectadas à fios e plugadas individualmente em portas digitais. Na figura \ref{fig:breadboard} podemos ver o esquema equivalente a uma linha da matriz de LEDs. As demais são conectadas da mesma maneira e só não foram adicionadas para não poluir a imagem.
+O circuito montado para execução deste trabalho é relativamente simples. As pernas negativas dos LEDs foram soldadas em um fio conectado na porta \textit{ground} do Arduino, enquanto as pernas positivas foram conectadas à fios e plugadas individualmente em portas digitais. Na figura \ref{fig:breadboard} podemos ver o esquema equivalente a uma linha da matriz de LEDs. As demais são conectadas da mesma maneira e só não foram adicionadas para não poluir a imagem.
 
 \begin{figure}[H]
   \begin{center}
@@ -262,7 +262,7 @@ A obra foi disposta em um ambiente de laboratório para que fossem realizados te
   \fonte{Elaborada pela autora}\\
 \end{figure}
 
-O próximo local de montagem será a pinacoteca Barão de Santo Ângelo, no Instituto de Artes da UFRGS, cuja planta com especificação da área na qual a obra será instalada pode ser vista na figura \ref{fig:pinacoteca}. O espaço se trata de um cubo branco, com luz artificial controlada, o que nos dá margem para propor um esquema de iluminação que valorize a obra.
+O próximo local de montagem será a pinacoteca Barão de Santo Ângelo, no Instituto de Artes da UFRGS, cuja planta com especificação da área na qual a obra será instalada pode ser vista na figura \ref{fig:pinacoteca}. Com um pé direito de 3,2 metros a pinacoteca oferece as condições necessárias para instalação do trabalho que será fixado no teto através de ganchos. O espaço se trata de um cubo branco, com luz artificial controlada, o que nos dá margem para propor um esquema de iluminação que valorize a obra.
 
 \begin{figure}[H]
   \begin{center}
@@ -274,6 +274,3 @@ O próximo local de montagem será a pinacoteca Barão de Santo Ângelo, no Inst
   \vspace*{-0,9cm}
   \fonte{Adaptado de https://www.ufrgs.br/institutodeartes}\\
 \end{figure}
-
-Com um pé direito de 3,2 metros a pinacoteca oferece as condições necessárias para instalação do trabalho que será fixado no teto através de ganchos. Colocado em um ponto central, permite que o espectador circunde o mesmo, possibilitando que mais de um interator desfrute a obra ao mesmo tempo, apesar de sua dimensão reduzida.
-
