@@ -1,45 +1,23 @@
-# Aura: luz e tecnologia aplicadas na arte
-<hr />
-
-#### Daniela Feitosa Araújo
-
-<small>Porto Alegre 2018</small>
+# Arte-Luz-Interatividade: 
+## Uma abordagem do uso da tecnologia na arte e da luz como material
 
 ---
 
 ## Agenda
 
 - Introdução
-- Interação e participação
 - Arte computacional e interatividade
-- A luz como material e o cubo preto
+- A luz como material
 - Composição da obra
-- Desafios
-- Próximos passos
+- Considerações finais
 
 ---
 
 # Introdução 
 
----
-
-# Interação e participação
-
 ----
 
-# Da contemplação à interação
-
-----
-
-# O espectador<br>como co-autor
-
-----
-
-# Efemeridade na arte computacional
-
-----
-
-# Obra de arte<br>em tempo real
+## Motivações
 
 ---
 
@@ -47,71 +25,85 @@
 
 ----
 
-# Arte computacional
-
-> "envolve sistemas computacionais tanto nos seus processos de criação e produção quanto na forma de apresentação"
->
-> <cite>BOONE, 2013</cite>
+## Da contemplação à interação
 
 ----
 
-# Interatividade na arte computacional
+### Graus de interatividade
+
+----
+
+## Instalações interativas
+
+----
+
+### O corpo do observador nas instalações interativas
 
 ---
 
-# A luz como material e o cubo preto
+# A luz como material
 
 ----
 
-# A luz como objeto ou material 
-
-> "alguns artistas e movimentos estéticos estão fortemente relacionados com a linguagem da luz, mesmo quando não a utilizam como objeto central da obra"
->
-> <cite>Brandi (2015)</cite>
+## A luz na história da arte
 
 ----
 
-# James Turrell
+<img src="images/giotto_lamentacao.jpg" height="460">
+
+<small>A lamentação (1305), Giotto de Bondone</small>
+
+----
+
+<img src="images/da_vinci_virgem_rochedos.png" height="460">
+
+<small>A virgem dos rochedos (1495-1508), Leonardo da Vinci</small>
+
+----
+
+<img src="images/seurat_la_parede.png" height="460">
+
+<small>La Parade (1887-88), Georges Seurat</small>
+
+----
 
 <video width="800" height="460" autoplay loop muted>
   <source src="images/james_turrell.mp4" type="video/mp4">
 </video>
 
-<small>"The light inside", 1999, James Turrell.</small>
+<small>The light inside (1999), James Turrell.</small>
 
 ----
-
-#  Takahito Matsuo
-
-<video width="800" height="460" autoplay loop muted>
-  <source src="images/takahito_matsuo.mp4" type="video/mp4">
-</video>
-
-<small>"Fantasias Aquáticas Iluminadas", 2009, Takahito Matsuo.</small>
-
-----
-
-# Jim Campbell
-
-<video width="800" height="460" autoplay loop muted>
-  <source src="images/jim_campbell_1.mp4" type="video/mp4">
-</video>
-
-<small>"Light Topography (Jane's Pool)", 2014, Jim Campbell. Fonte: KQED</small>
-
-----
-
-# Jim Campbell
 
 <video width="800" height="460" autoplay loop muted>
   <source src="images/jim_campbell_2.mp4" type="video/mp4">
 </video>
 
-<small>"The Journey",  2013, Jim Campbell, localizada no Aeroporto Internacional de San Diego. Fonte: KQED</small>
+<small>The Journey (2013), Jim Campbell, localizada no Aeroporto Internacional de San Diego. Fonte: KQED</small>
 
 ----
 
-# O cubo preto
+## Luz e interatividade
+
+----
+
+<video width="800" height="460" autoplay loop muted>
+  <source src="images/tsutomu_mutoh.mp4" type="video/mp4">
+</video>
+
+<small>Optone (2009), Tsutomu Mutoh</small>
+
+----
+
+<video width="800" height="460" autoplay loop muted>
+  <source src="images/takahito_matsuo.mp4" type="video/mp4">
+</video>
+
+<small>Fantasias Aquáticas Iluminadas, 2009, Takahito Matsuo.</small>
+
+----
+
+## O cubo preto
 
 > "a maioria dos autores que trabalham com arte e tecnologia procuram o espaço do cubo preto como espaço expositivo"
 > 
@@ -121,35 +113,30 @@
 
 # Composição da obra
 
-<img src="images/esquema.png" height="460" />
+----
+
+## Dispositivos e tecnologias
+
+----
+### Microsoft Kinect
+
+<img src="images/kinect_componentes.png" height="460">
 
 ----
 
-# Microsoft Kinect
-
-<img src="images/kinect_componentes.png" />
+### Arduino Mega 2560
+----
+### Processing
+----
+### Computador
 
 ----
 
-## Sombras 
-
-<img src="images/kinect_sombras.jpg" />
+## Prototipação e testes
 
 ----
 
-# Arduino
-
-----
-
-# Malha de LEDs e fibra ótica
-
-----
-
-# Protótipo
-
-----
-
-## Ambiente iluminado
+### Ambiente iluminado
 
 <video width="800" height="460" autoplay loop muted>
   <source src="images/prototipo_luz.mp4" type="video/mp4">
@@ -157,27 +144,38 @@
 
 ----
 
-## Ambiente com baixa luminosidade
+### Ambiente com baixa luminosidade
 
 <video width="800" height="460" autoplay loop muted>
   <source src="images/prototipo_escuro.mp4" type="video/mp4">
 </video>
 
+----
+
+## Descrição da solução
+
+----
+### Interface
+----
+### Gerenciamento digital
+----
+### Dispositivo de saída de dados
+----
+#### Circuito
+----
+#### Malha de LEDs
+
+----
+
+## Montagem e instalação
+
 ---
 
-# Desafios
+# Consideranções finais
 
-- Escalando o trabalho
-- Instalação e local expositivo
-- Custo
+----
 
----
-
-# Próximos passos
-
-- Montar a grade de LEDs
-- Alterar o script para funcionar com uma matriz
-- Buscar alternativa para o problema das sombras
+## Trabalhos futuros
 
 ---
 
