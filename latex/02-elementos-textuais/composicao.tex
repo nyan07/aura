@@ -1,9 +1,9 @@
 \chapter{COMPOSIÇÃO DA OBRA}
-Esta capítulo está organizado em quatro partes. Primeiro vamos trazer um breve relato sobre os dispositivos e tecnologias utilizados, depois apresentaremos o protótipo construído para validar o \textit{software} e o \textit{hardware} escolhidos para elaboração da obra, em seguida vamos fazer uma descrição da solução, apresentando as principais barreiras encontradas ao longo do percurso e, por fim, apresentaremos o projeto de instalação e montagem. 
+Este capítulo está organizado em quatro partes. Primeiro vamos trazer um breve relato sobre os dispositivos e tecnologias utilizados, depois apresentaremos o protótipo construído para validar o \textit{software} e o \textit{hardware} escolhidos para elaboração da obra, em seguida vamos fazer uma descrição da solução, apresentando as principais barreiras encontradas ao longo do percurso e, por fim, apresentaremos o projeto de instalação e montagem. 
 
 \section{DISPOSITIVOS E TECNOLOGIAS}
 
-Com o intuito de manter documentada, possibilitando a reprodução ou atualização deste projeto no futuro, se faz necessário listar as versões e configurações aplicadas (quadro \ref{quadro:dispositivos}), bem como introduzir os principais dispositivos e tecnologias utilizados. Dentre os componentes essenciais em termos de \textit{hardware} temos o Microsoft Kinect, o Arduino e o computador; enquanto o principal \textit{software} é a Processing, responsável por orquestrar o funcionamento destes equipamentos em conjunto, através de um \textit{script} desenvolvido ao longo desse trabalho. 
+Com o intuito de manter documentado, possibilitando a reprodução ou atualização deste projeto no futuro, se faz necessário listar as versões e configurações aplicadas (quadro \ref{quadro:dispositivos}), bem como introduzir os principais dispositivos e tecnologias utilizados. Dentre os componentes essenciais em termos de \textit{hardware} temos o Microsoft Kinect, o Arduino e o computador; enquanto o principal \textit{software} é a Processing, responsável por orquestrar o funcionamento destes equipamentos em conjunto, através de um \textit{script} desenvolvido ao longo desse trabalho. 
 
 
 \begin{quadro}[H]
@@ -40,7 +40,7 @@ A figura \ref{fig:dispositivos} mostra como esses dispositivos estão interligad
 
 \subsection{Microsoft Kinect}
 
-O sensor Kinect é um dispositivo lançado em 4 de Novembro de 2010 como um acessório do console Xbox 360 da Microsoft. Orientado, principalmente, a indústria de jogos, foi criado para servir como uma forma de interação entre o utilizador e o console Xbox 360 através de gestos e comandos de voz. De acordo com a \citeonline{microsoft}, em sua primeira versão, é capaz de capturar imagens com 640x480 \textit{pixels} a 30 fps. O aparelho é formado por um emissor e sensor de profundidade baseados em infravermelho, uma câmera RGB, um motor de inclinação e uma série de 4 microfones. Na figura \ref{fig:kinect_componentes} podemos ver a posição de cada um destes componentes no dispositivo.
+O sensor Kinect é um dispositivo lançado em 4 de Novembro de 2010 como um acessório do console Xbox 360 da Microsoft. Orientado, principalmente, à indústria de jogos, foi criado para servir como uma forma de interação entre o utilizador e o console Xbox 360 através de gestos e comandos de voz. De acordo com a \citeonline{microsoft}, em sua primeira versão, é capaz de capturar imagens com 640x480 \textit{pixels} a 30 fps. O aparelho é formado por um emissor e sensor de profundidade baseados em infravermelho, uma câmera RGB, um motor de inclinação e uma série de 4 microfones. Na figura \ref{fig:kinect_componentes} podemos ver a posição de cada um destes componentes no dispositivo.
 
 \begin{figure}[H]
   \begin{center}
@@ -170,10 +170,10 @@ O gerencimento digital da obra é realizado através de um computador que execut
 
 \subsection{\textbf{Dispositivo de saída de dados}}
 
-O Arduino e a malha de LEDs, juntos, formam o dispositivo de saída de dados (\textit{output}) que recebe as informações mapeadas pelo sensor Kinect (entrada ou \textit{input}). Cada LED precisa ser controlado individualmente, por isso optou-se pela utilização do Arduino Mega 2560 que possui 54 entradas/saídas digitais, suficientes para atender a proposta apresentada sem adicionar complexidade ao circuito.
+O Arduino e a malha de LEDs, juntos, formam o dispositivo de saída de dados (\textit{output}) que recebe as informações mapeadas pelo sensor Kinect (\textit{input}). Cada LED precisa ser controlado individualmente, por isso optou-se pela utilização do Arduino Mega 2560 que possui 54 entradas/saídas digitais, suficientes para atender a proposta apresentada sem adicionar complexidade ao circuito.
 
 
-Não foi necessário escrever um \textit{software} para executar no Arduino. Utilizou-se a biblioteca Firmata para servir como ponte de comunicação entre o dispositivo e o computador. Através de um programa fornecido pela mesma e enviado para o microcontrolador foi possível gerenciar, a partir da Processing, todos os recursos disponíveis na placa.
+Não foi necessário escrever um \textit{software} para executar no Arduino. Utilizou-se a biblioteca Firmata para servir como ponte de comunicação entre o dispositivo e o computador. Através de um programa fornecido pela mesma e enviado ao microcontrolador foi possível gerenciar, a partir da Processing, todos os recursos disponíveis na placa.
 
 \subsubsection{Circuito}
 
