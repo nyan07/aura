@@ -6,35 +6,15 @@
 ## Agenda
 
 <small>
-- Introdução
 - Arte computacional e interatividade
   - Da contemplação à interação
   - Arte computacional
   - Instalações interativas
 - A luz como material
   - A luz na história da arte
-  - Luz e interatividade
-  - O cubo preto
 - Composição da obra
-  - Dispositivos e tecnologias
-  - Prototipação e testes
-  - Descrição da solução
-- Considerações finais
 
 </small>
----
-
-# Introdução 
-
-----
-
-## Motivações
-
-Note: 
-- 16 anos de experiência com tecnologia
-- Formação acadêmia em tecnologia
-- Relação arte x tecnologia e vice-versa.
-
 ---
 
 # Arte computacional e interatividade
@@ -74,30 +54,6 @@ Note:
 
 ----
 
-### Graus de interatividade
-
-Note:
-- Levy:
-  - O receptor nunca é completamente passivo
-  - Graus de interatividade
-- Couchot: 
-  - Exógena (espectador-imagem) x endógena (imagem-imagem)
-- Tavares:
-  - Ascott: trivial e não trivial
-  - Holtz-Bonneau: de seleção e de conteúdo
-  - Marie-Hélène Tramus: simulada e real
-  - trivial, de seleção ou simulada: o receptor atualiza apenas o potencial de escolhas embutido na obra
-  - não-trivial, na de conteúdo ou real: o receptor pode enriquecer e transformar a informação que circula ou que está estocada nos terminais
-- Gianetti:
-  - 3 tipos de interatividade homem-máquina
-    - sistema mediador: onde ocorrem reações pontuais e simples; 
-    - sistema reativo: onde o usuário tem acesso multidire- cional ao conteúdo a partir de possibilidades limitadas pela programação e definição do sistema; 
-    - sistema interativo de fato, onde o interator passa à função de emissor de informação, podendo intervir, manipular e gerar novos conteúdos
-- Primo:
-  - reativa: ação e reação (realimentação circular)
-  - mútua: complexidade global
-
-----
 
 ## Arte computacional
 
@@ -133,19 +89,7 @@ Note:
 - no campo da arte e tecnologia, o conceito de instalação é ampliado para um ambiente onde são criadas situações com dispositivos tecnológicos (Bochio)
 - O espaço se torna sensível (Bochio)
 - Público como essencial para o acontecimento da obra (Sogabe)
-- Necessária a exist6encia de uma interface (Witt e Vares), parte sensível do sistema tecnológico (Sogabe)
-
-----
-
-### O corpo do observador nas instalações interativas
-
-Note: 
-- O corpo do observador faz parte da obra (Sogabe)
-- A partir da arte cinética os artistas vem solicitando a participação do corpo do observador (Rabello)
-- os dispositivos interativos imaginados pelos artistas tendem a solicitar a participação do corpo inteiro (Couchot)
-- o corpo da obra já não existe independente do corpo do observador (Sogabe)
-- fricção: a do corpo do usuário, orgânico, com um sistema tecnológico, artificial (Witt e Vares)
-- o público irá decidir se empresta ou não o seu corpo ao trabalho (Vares)
+- Necessária a existência de uma interface (Witt e Vares), parte sensível do sistema tecnológico (Sogabe)
 
 ---
 
@@ -194,18 +138,6 @@ Luz efeito:
 
 ----
 
-<img src="images/seurat_la_parede.png" height="460">
-
-<small>La Parade (1887-88), Georges Seurat</small>
-
-Note:
-- Com o advento da fotografia os pintores precisaram se reinventar.
--  a fotografia influenciou os impressionistas a saírem do ateliês (Muga)
-- ao olharmos a natureza ao ar livre e à plena luz do dia, as formas redondas parecem planas, e não vemos os objetos cada um com a sua cor própria, mas uma mistura brilhante de matizes que se combinam nos nossos olhos (Gombrich)
-- foi apoiado no preceito de que a cor se mistura no olho e não na paleta que Seurat aplicava pontos de cor na tela (Henno)
-
-----
-
 <video width="800" height="460" autoplay loop muted>
   <source src="images/james_turrell.mp4" type="video/mp4">
 </video>
@@ -224,98 +156,9 @@ James Turrell:
 - não é mais incomum usá-la do que usar pedra, argila, aço ou tinta
 - rica tradição na pintura do trabalho sobre a luz, mas que isso de fato não é luz - é o registro da visão
 
-----
-
-<video width="800" height="460" autoplay loop muted>
-  <source src="images/jim_campbell_2.mp4" type="video/mp4">
-</video>
-
-<small>The Journey (2013), Jim Campbell, localizada no Aeroporto Internacional de San Diego. Fonte: KQED</small>
-
-Note: 
-Jim Campbell:
-- antítese presente em suas obras
-- imagens borradas e em baixa resolução em painéis tridimensionais
-- grades de LEDs que atuam como uma televisão de pixels desconstruída
-
-----
-
-## Luz e interatividade
-
-Note:
-- aliado ao desenvolvimento da ciência e da tecnologia, o homem de hoje tem condições de gerar e projetar a luz artificialmente ao invés de se restringir aos meios naturais (Henno)
-
-----
-
-<video width="800" height="460" autoplay loop muted>
-  <source src="images/tsutomu_mutoh.mp4" type="video/mp4">
-</video>
-
-<small>Optone (2009), Tsutomu Mutoh</small>
-
-Note: 
-- Devido ao seu peso e à ação da gravidade a cúpula pode ser movimentada sem que a base perca contato com o solo
-- movimentos de rotação são detectados por sensores
-- associa uma cor às coordenadas pelas quais a cúpula passa
-
-----
-
-<video width="800" height="460" autoplay loop muted>
-  <source src="images/takahito_matsuo.mp4" type="video/mp4">
-</video>
-
-<small>Fantasias Aquáticas Iluminadas, 2009, Takahito Matsuo.</small>
-
-Note: 
-- cria mundos interativos de fantasia e de luz 
-- misturando som e luz perante os movimentos do observador
-- À medida que os visitantes se aproximam das paredes, se movimentam e se afastam, o número e a frequência das medusas aumentam e diminuem
-
-----
-
-## O cubo preto
-
-> "a maioria dos autores que trabalham com arte e tecnologia procuram o espaço do cubo preto como espaço expositivo"
-> 
-> <cite>Soares (2013)</cite>
-
-Note: 
-- Contaposição ao cubo branco
-- Propagação da luz
-- Imersão na mente do artista
-- projetores de alta luminância (Sogabe)
-- quando há pouca ou nenhuma luminosidade, a intensidade das cores é maior e mais perceptível devido ao contraste com a escuridão (Henno)
 ---
 
 # Composição da obra
-
-----
-
-## Dispositivos e tecnologias
-
-----
-### Microsoft Kinect
-
-<img src="images/kinect_componentes.png" height="460">
-
-----
-
-### Arduino Mega 2560
-----
-### Processing
-----
-### Computador
-
-----
-
-## Prototipação e testes
-
-----
-
-<img src="images/prototipo.jpg" height="460">
-----
-
-## Descrição da solução
 
 ----
 <img src="images/esquema.png" height="460">
@@ -331,31 +174,6 @@ Note:
 ### Gerenciamento digital
 ----
 <img src="images/script.jpg" height="260">
-----
-### Dispositivo de saída de dados
-----
-#### Circuito
-----
-
-#### Malha de LEDs
-
-----
-<img src="images/led_fibra_otica.jpg" height="260">
-
-----
-
-## Montagem e instalação
-
-----
-<img src="images/trabalho.jpg" height="260">
-
----
-
-# Consideranções finais
-
-----
-
-<img src="images/malha_futuro.png" height="260">
 
 ---
 
